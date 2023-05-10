@@ -1,0 +1,51 @@
+/*
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map.
+ */
+
+
+/*
+@media only screen and (max-width: 600px){
+  .navbar{
+  height: 6.5%;
+}
+  .navbar-toggler{
+    font-size: 2.25rem !important;
+  }
+}
+
+
+ */
+@media only screen and (min-width: 600px){
+  #map {
+    height: 60%;
+    margin: 30px;
+  }
+  #carouselExampleIndicators{
+    height: 50%;
+    margin: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  #map {
+    height: 50%;
+    margin: 10px;
+  }
+  #carouselExampleIndicators{
+    height: 50%;
+    margin: 10px;
+  }
+}
+
+
+
+/*
+ * Optional: Makes the sample page fill the window.
+ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
