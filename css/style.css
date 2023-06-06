@@ -20,6 +20,8 @@
   #map {
     height: 60%;
     margin: 30px;
+    border-radius: 10%; !important;
+    border-style: solid;
   }
   #carouselExampleIndicators{
     height: 50%;
