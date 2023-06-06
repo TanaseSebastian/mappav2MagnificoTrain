@@ -17,12 +17,6 @@
 
  */
 @media only screen and (min-width: 600px){
-  #map {
-    height: 60%;
-    margin: 30px;
-  /*  border-radius: 10%; !important;*/
-    border-style: solid;
-  }
   #carouselExampleIndicators{
     height: 50%;
     margin: 20px;
@@ -36,6 +30,7 @@ button.navbar-toggler{
 
 #map {
   margin: 30px;
+  height: 60%;
   /*border-radius: 10%; !important;*/
   border-style: solid;
 }
@@ -83,7 +78,6 @@ button.navbar-toggler{
 
 @media only screen and (max-width: 600px){
   #map {
-    height: 50%;
     margin: 10px;
   }
   #carouselExampleIndicators{
