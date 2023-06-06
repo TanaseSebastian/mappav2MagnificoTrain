@@ -29,56 +29,64 @@
   </div>
   <nav class="navbar  **fixed-top**  navbar-dark bg-dark">
     <button class="navbar-toggler" type="button" >
-     <a href="italiano.html"> <img  height="30px" src ="./img/italia.png" style="position:relative;"></a>
+     <a href="italiano.html"> <img class="bandiera"  height="30px" src ="./img/italia.png" style="position:relative;"></a>
     </button>
     <button class="navbar-toggler" type="button" >
-      <img  height="30px" src ="./img/inglese.png" style="position:relative;">
+      <img class="bandiera"  height="30px" src ="./img/inglese.png" style="position:relative;">
     </button>
     <button class="navbar-toggler" type="button" >
-      <img  height="30px" src ="./img/tedesco.jpeg" style="position:relative;">
+      <img class="bandiera"  height="30px" src ="./img/tedesco.jpeg" style="position:relative;">
     </button>
     <button class="navbar-toggler" type="button" >
-      <img  height="30px" src ="./img/france.png" style="position:relative;">
+      <img class="bandiera"  height="30px" src ="./img/france.png" style="position:relative;">
     </button>
     <button class="navbar-toggler" type="button" >
-    <img  height="30px" src ="./img/spagnolo.jpeg" style="position:relative;">
+    <img class="bandiera"  height="30px" src ="./img/spagnolo.jpeg" style="position:relative;">
     </button>
   </nav>
 </div>
 
 
-
+<div class="sfondo">
 <!--The div element for the map -->
 <div id="map"></div>
-
-<div>
+</div>
+<div class="sfondo2">
   <div id="carouselExampleIndicators" class="carousel slide" data-interval="false">
-    <ol class="carousel-indicators">
+    <ol class="carousel-indicators" style="visibility: hidden">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img class="d-block w-100" src="./img/torre.jpeg" alt="First slide">
-
-        <span>Chiesa di Maria Santissima del Monte Carmelo</span>
-        <span>La chiesa di Maria Santissima del Monte Carmelo (comunemente detta chiesa del Carmine) di Taranto è una delle chiese del Borgo Umbertino della città. La sua esistenza si attesta fin dal 1577, ma nel corso dei secoli è stata rimaneggiata più volte fino ad assumere l’attuale aspetto neoclassico</span>
-
+        <div class="place-description">
+        <div><img class="d-block w-100 image-carosello" src="./img/torre.jpeg" alt="First slide"></div>
+          <div class="content_color">
+            <h2>Chiesa di Maria Santissima del Monte Carmelo</h2>
+            <span>La chiesa di Maria Santissima del Monte Carmelo (comunemente detta chiesa del Carmine) di Taranto è una delle chiese del Borgo Umbertino della città. La sua esistenza si attesta fin dal 1577, ma nel corso dei secoli è stata rimaneggiata più volte fino ad assumere l’attuale aspetto neoclassico</span>
+          </div>
+           </div>
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="./img/cattedrale.jpeg" alt="Second slide">
+        <div class="place-description">
+        <div>
+        <img class="d-block w-100 image-carosello" src="./img/cattedrale.jpeg" alt="Second slide">
+        </div>
 
-        <span>Torre di sto cazzo di Maria Santissima del Monte Carmelo</span>
-        <span>La chiesa di Maria Santissima del Monte Carmelo (comunemente detta chiesa del Carmine) di Taranto è una delle chiese del Borgo Umbertino della città. La sua esistenza si attesta fin dal 1577, ma nel corso dei secoli è stata rimaneggiata più volte fino ad assumere l’attuale aspetto neoclassico</span>
-
+          <h2>Torre di sto cazzo di Maria Santissima del Monte Carmelo</h2>
+          <span>La chiesa di Maria Santissima del Monte Carmelo (comunemente detta chiesa del Carmine) di Taranto è una delle chiese del Borgo Umbertino della città. La sua esistenza si attesta fin dal 1577, ma nel corso dei secoli è stata rimaneggiata più volte fino ad assumere l’attuale aspetto neoclassico</span>
+        </div>
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="./img/castello.jpeg" alt="Third slide">
+        <div class="place-description">
+        <div>
+          <img class="d-block w-100 image-carosello" src="./img/castello.jpeg" alt="Third slide">
+        </div>
 
-        <span>Cattedrale di Maria Santissima del Monte Carmelo</span>
-        <span>La chiesa di Maria Santissima del Monte Carmelo (comunemente detta chiesa del Carmine) di Taranto è una delle chiese del Borgo Umbertino della città. La sua esistenza si attesta fin dal 1577, ma nel corso dei secoli è stata rimaneggiata più volte fino ad assumere l’attuale aspetto neoclassico</span>
-
+          <h2>Cattedrale di Maria Santissima del Monte Carmelo</h2>
+          <span>La chiesa di Maria Santissima del Monte Carmelo (comunemente detta chiesa del Carmine) di Taranto è una delle chiese del Borgo Umbertino della città. La sua esistenza si attesta fin dal 1577, ma nel corso dei secoli è stata rimaneggiata più volte fino ad assumere l’attuale aspetto neoclassico</span>
+        </div>
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

@@ -27,6 +27,57 @@
   }
 }
 
+
+button.navbar-toggler{
+  border: 0;
+}
+
+#map {
+  border-radius: 10%;
+  border-style: solid;
+}
+
+
+.bandiera{
+  width: 50px;
+  border-radius: 50%;
+  height: 50px;
+}
+
+
+.image-carosello{
+  border-radius: 10%;
+}
+
+.place-description{
+  /*background: linear-gradient(#3686E2, #ffffff);*/
+  border-radius: 10%;
+}
+
+.sfondo{
+  background: linear-gradient(white, #3686E2);
+  padding-top: 1%;
+  padding-bottom: 10%;
+  /*background-color: #3686E2 ;*/
+}
+
+.content_color{
+  margin-top: 10%;
+  width: 100%;
+  background-color: white;
+  padding: 10%;
+  border-radius: 10%;
+}
+
+.sfondo2{
+  background-color : #3686E2;
+  margin-top: -1%;
+  /*margin-top: -10%;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;*/
+  padding: 2%;
+}
+
 @media only screen and (max-width: 600px){
   #map {
     height: 50%;
@@ -38,13 +89,20 @@
   }
 }
 
-
+h2{
+  font-size: 2rem;
+  text-align: center;
+  border-style: solid; !important;
+  border-radius: 20%; !important;
+  margin: 15px;!important;
+}
 
 /*
  * Optional: Makes the sample page fill the window.
  */
 html,
 body {
+
   height: 100%;
   margin: 0;
   padding: 0;
