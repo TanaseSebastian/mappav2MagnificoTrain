@@ -33,7 +33,7 @@ button.navbar-toggler{
 }
 
 #map {
-  border-radius: 10%;
+  border-radius: 10%; !important;
   border-style: solid;
 }
 
