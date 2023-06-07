@@ -94,6 +94,7 @@ button.navbar-toggler{
   padding: 5%;
   border-radius: 10%;
   background-color: white;
+  border-color: whitesmoke;
 }
 
 .content_color h2{
