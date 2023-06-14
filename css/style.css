@@ -104,6 +104,13 @@ button.navbar-toggler{
   margin: 0px 10px 20px 10px;!important;
 }
 
+
+.modificaIcona {
+  width: 60px; !important;
+  height: 60px; !important;
+  background: #3686e3 no-repeat center center; !important;
+}
+
 /*
  * Optional: Makes the sample page fill the window.
  */
