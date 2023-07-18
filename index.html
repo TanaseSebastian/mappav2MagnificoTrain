@@ -7,6 +7,7 @@
   <style>
 
     html{
+      height: 100%;
       background: linear-gradient(white, #3686E2);
     }
 
@@ -38,8 +39,9 @@
     }
 
     img{
-      height: 30%;
+      height: 120px;
       width: 200px;
+      margin:10px;
     }
   </style>
 </head>
@@ -47,12 +49,41 @@
 <div class="container">
   <h1>Seleziona la tua lingua</h1>
   <div class="flags">
-    <a href="italiano.html"><img src="img/italia.png" alt="Italiano"></a>
-    <a href="english.html"><img src="img/inglese.png"  alt="English"></a>
-    <a href="#"><img src="img/tedesco.jpeg"  alt="Deutsch"></a>
-    <a href="#"><img src="img/france.png"  alt="Français"></a>
-    <a href="#"><img src="img/spagnolo.jpeg"  alt="Español"></a>
+    <div onclick="location.href='italiano.html'">
+      <img id="italia-img" src="img/italia.png" alt="Italiano">
+    </div>
+    <div>
+      <img  id="inglese-img" src="img/inglese.png"  alt="English">
+    </div>
+    <div>
+      <img id="tedesco-img" src="img/tedesco.jpeg"  alt="Deutsch">
+    </div>
+    <div>
+      <img id="france-img" src="img/france.png"  alt="Français">
+    </div>
+    <div>
+     <img id="spagnolo-img" src="img/spagnolo.jpeg"  alt="Español">
+    </div>
+
+
   </div>
 </div>
+
+<script>
+  window.onload = function() {
+    var italiaImg = document.getElementById('italia-img');
+    italiaImg.src = "img/italia.png";
+    var ingleseImg = document.getElementById('inglese-img');
+    ingleseImg.src = "img/inglese.png";
+    var tedescoImg = document.getElementById('tedesco-img');
+    tedescoImg.src = "img/tedesco.jpeg";
+    var franceImg = document.getElementById('france-img');
+    franceImg.src = "img/france.png";
+    var spagnoloImg = document.getElementById('spagnolo-img');
+    spagnoloImg.src = "img/spagnolo.jpeg";
+
+  };
+</script>
+
 </body>
 </html>
