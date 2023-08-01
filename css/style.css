@@ -120,3 +120,24 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+/*
+stile frecce, fixed
+ */
+
+.fixed-carousel-arrow {
+  position: absolute;
+  top: 200px;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+/* Imposta la posizione delle frecce a sinistra e a destra */
+.carousel-control-prev-icon {
+  left: 0;
+}
+
+.carousel-control-next-icon {
+  right: 0;
+}
+
