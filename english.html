@@ -4,7 +4,7 @@
 <head>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
-  <title>Map Magnifico Train ENG</title>
+  <title>Map Magnifico Train</title>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   <link rel="stylesheet" type="text/css" href="./css/style.css" />
   <link rel="stylesheet" type="text/css" href="./css/stylePopup.css" />
@@ -29,10 +29,10 @@
   </div>
   <nav class="navbar  **fixed-top**  navbar-dark bg-dark">
     <button class="navbar-toggler" type="button" >
-     <a href="italiano.html"> <img class="bandiera" height="30px" src ="./img/italia.png" style="position:relative;"></a>
+      <a> <img class="bandiera"  height="30px" src ="./img/italia.png" style="position:relative;"></a>
     </button>
     <button class="navbar-toggler" type="button" >
-      <img class="bandiera"  height="30px" src ="./img/inglese.png" style="position:relative;">
+      <a href="english.html"><img class="bandiera"  height="30px" src ="./img/inglese.png" style="position:relative;"></a>
     </button>
     <button class="navbar-toggler" type="button" >
       <img class="bandiera"  height="30px" src ="./img/tedesco.jpeg" style="position:relative;">
@@ -41,21 +41,21 @@
       <img class="bandiera"  height="30px" src ="./img/france.png" style="position:relative;">
     </button>
     <button class="navbar-toggler" type="button" >
-    <img class="bandiera"  height="30px" src ="./img/spagnolo.jpeg" style="position:relative;">
+      <img class="bandiera"  height="30px" src ="./img/spagnolo.jpeg" style="position:relative;">
     </button>
   </nav>
 </div>
 
 
 <div class="sfondo">
-<!--The div element for the map -->
-<div id="map"></div>
+  <!--The div element for the map -->
+  <div id="map"></div>
   <div class="audioDiv">
-  <h2 style="text-align: center; font-size: 1.5em">Audio guide</h2>
-  <audio controls style="margin: 5% 5%; width: 90%;">
-    <source src="music/audio-eng.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+    <h2 style="text-align: center; font-size: 1.5em">Audioguida</h2>
+    <audio controls style="margin: 5% 5%; width: 90%;">
+      <source src="music/audio-eng.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
   </div>
 </div>
 
@@ -66,53 +66,293 @@
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     </ol>
+
+
+    <!-- inizio carosello -->
+
     <div class="carousel-inner">
       <div class="carousel-item active">
         <div class="place-description">
-        <div><img class="d-block w-100 image-carosello" src="./img/torre.jpeg" alt="First slide"></div>
+          <!--<div><img class="d-block w-100 image-carosello" src="./FOTO/.png" alt="First slide"></div>-->
           <div class="content_color">
-            <h2>Church of Maria Santissima del Monte Carmelo</h2>
-            <span>The church of Maria Santissima del Monte Carmelo (commonly known as the church of the Carmine) of Taranto is one of the churches of the Borgo Umbertino of the city. Its existence dates back to 1577, but over the centuries it has been remodeled several times until it took on its current neoclassical appearance</span>          </div>
-           </div>
+            <h2>Benvenuti a bordo del Trenino Turistico di Taranto!</h2>
+            <span>Capoluogo dell'omonima provincia pugliese, Taranto si affaccia sull'omonimo Golfo sul Mar Ionio ed è definita la 'Città dei due mari' per il fatto di estendersi tra il Mar Grande ed il Mar Piccolo. La sua nascita è datata nel lontano 706 a.C. quando fu fondata da coloni provenienti da Sparta, diventando successivamente uno dei centri più attivi di tutta la Magna Grecia. Nel corso dei secoli assunse, poi, un'importanza strategica divenendo uno dei porti più importanti del Mediterraneo. La città si divide in tre parti: il borgo antico o città vecchia che è situato su di un'isola, collegata da un'estremità con un ponte denominato "ponte di pietra" che porta al quartiere industriale e dall'altro estremo porta al "borgo Umbertino" mediante il cosiddetto “ponte girevole”.</span>
+          </div>
+        </div>
       </div>
 
 
       <div class="carousel-item">
         <div class="place-description">
-          <div><img class="d-block w-100 image-carosello" src="./img/cattedrale.jpeg" alt="Second slide"></div>
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/2.png" alt="Second slide"></div>
           <div class="content_color">
-            <h2>Clock Tower</h2>
-            <span>The Clock Tower of Taranto is one of the monuments of the ancient village of the city. It was built in the second half of the eighteenth century in its original form, i.e. without the advanced polygonal body and the bell tower added later.</span>        </div>
-      </div>
+            <h2>Torre dell'orologio</h2>
+            <span>La Torre dell'Orologio di Taranto è uno dei monumenti del Borgo Antico della città. Fu costruito nella seconda metà del Settecento nella forma originaria, cioè senza il corpo poligonale avanzato e la cuspide campanaria aggiunti più tardi.</span>
+          </div>
+        </div>
       </div>
 
       <div class="carousel-item">
         <div class="place-description">
-        <div><img class="d-block w-100 image-carosello" src="./img/castello.jpeg" alt="Third slide"></div>
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/3.png" alt="Second slide"></div>
           <div class="content_color">
-            <h2>Cathedral of San Cataldo</h2>
-            <span>The cathedral of San Cataldo (or cathedral of San Cataldo) is the cathedral of the archdiocese of Taranto and is the oldest Romanesque cathedral in Puglia. Initially dedicated to Santa Maria Maddalena then to San Cataldo Vescovo.</span>        </div>
+            <h2>Torre dell'orologio</h2>
+            <span>La Torre dell'Orologio di Taranto è uno dei monumenti del Borgo Antico della città. Fu costruito nella seconda metà del Settecento nella forma originaria, cioè senza il corpo poligonale avanzato e la cuspide campanaria aggiunti più tardi.</span>
+          </div>
+        </div>
       </div>
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/4.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Cattedrale di San Cataldo</h2>
+            <span>La cattedrale di San Cataldo (o duomo di San Cataldo) è la cattedrale della arcidiocesi di Taranto ed è la più antica cattedrale romanica pugliese. Inizialmente dedicata a Santa Maria Maddalena poi a San Cataldo Vescovo.</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/5.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Cattedrale di San Cataldo</h2>
+            <span>La cattedrale di San Cataldo (o duomo di San Cataldo) è la cattedrale della arcidiocesi di Taranto ed è la più antica cattedrale romanica pugliese. Inizialmente dedicata a Santa Maria Maddalena poi a San Cataldo Vescovo.</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/6.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Cattedrale di San Cataldo</h2>
+            <span>La cattedrale di San Cataldo (o duomo di San Cataldo) è la cattedrale della arcidiocesi di Taranto ed è la più antica cattedrale romanica pugliese. Inizialmente dedicata a Santa Maria Maddalena poi a San Cataldo Vescovo.</span>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/7.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Cattedrale di San Cataldo</h2>
+            <span>La cattedrale di San Cataldo (o duomo di San Cataldo) è la cattedrale della arcidiocesi di Taranto ed è la più antica cattedrale romanica pugliese. Inizialmente dedicata a Santa Maria Maddalena poi a San Cataldo Vescovo.</span>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/8.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Cattedrale di San Cataldo</h2>
+            <span>La cattedrale di San Cataldo (o duomo di San Cataldo) è la cattedrale della arcidiocesi di Taranto ed è la più antica cattedrale romanica pugliese. Inizialmente dedicata a Santa Maria Maddalena poi a San Cataldo Vescovo.</span>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/9.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Cattedrale di San Cataldo</h2>
+            <span>La cattedrale di San Cataldo (o duomo di San Cataldo) è la cattedrale della arcidiocesi di Taranto ed è la più antica cattedrale romanica pugliese. Inizialmente dedicata a Santa Maria Maddalena poi a San Cataldo Vescovo.</span>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/10.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Cattedrale di San Cataldo</h2>
+            <span>La cattedrale di San Cataldo (o duomo di San Cataldo) è la cattedrale della arcidiocesi di Taranto ed è la più antica cattedrale romanica pugliese. Inizialmente dedicata a Santa Maria Maddalena poi a San Cataldo Vescovo.</span>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/11.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Cattedrale di San Cataldo</h2>
+            <span>La cattedrale di San Cataldo (o duomo di San Cataldo) è la cattedrale della arcidiocesi di Taranto ed è la più antica cattedrale romanica pugliese. Inizialmente dedicata a Santa Maria Maddalena poi a San Cataldo Vescovo.</span>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/12.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Cattedrale di San Cataldo</h2>
+            <span>La cattedrale di San Cataldo (o duomo di San Cataldo) è la cattedrale della arcidiocesi di Taranto ed è la più antica cattedrale romanica pugliese. Inizialmente dedicata a Santa Maria Maddalena poi a San Cataldo Vescovo.</span>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/13.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Cattedrale di San Cataldo</h2>
+            <span>La cattedrale di San Cataldo (o duomo di San Cataldo) è la cattedrale della arcidiocesi di Taranto ed è la più antica cattedrale romanica pugliese. Inizialmente dedicata a Santa Maria Maddalena poi a San Cataldo Vescovo.</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/14.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Cattedrale di San Cataldo</h2>
+            <span>La cattedrale di San Cataldo (o duomo di San Cataldo) è la cattedrale della arcidiocesi di Taranto ed è la più antica cattedrale romanica pugliese. Inizialmente dedicata a Santa Maria Maddalena poi a San Cataldo Vescovo.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/15.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Cattedrale di San Cataldo</h2>
+            <span>La cattedrale di San Cataldo (o duomo di San Cataldo) è la cattedrale della arcidiocesi di Taranto ed è la più antica cattedrale romanica pugliese. Inizialmente dedicata a Santa Maria Maddalena poi a San Cataldo Vescovo.</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/16.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Cattedrale di San Cataldo</h2>
+            <span>La cattedrale di San Cataldo (o duomo di San Cataldo) è la cattedrale della arcidiocesi di Taranto ed è la più antica cattedrale romanica pugliese. Inizialmente dedicata a Santa Maria Maddalena poi a San Cataldo Vescovo.</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/17.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Cattedrale di San Cataldo</h2>
+            <span>La cattedrale di San Cataldo (o duomo di San Cataldo) è la cattedrale della arcidiocesi di Taranto ed è la più antica cattedrale romanica pugliese. Inizialmente dedicata a Santa Maria Maddalena poi a San Cataldo Vescovo.</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/18.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Cattedrale di San Cataldo</h2>
+            <span>La cattedrale di San Cataldo (o duomo di San Cataldo) è la cattedrale della arcidiocesi di Taranto ed è la più antica cattedrale romanica pugliese. Inizialmente dedicata a Santa Maria Maddalena poi a San Cataldo Vescovo.</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/19.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Cattedrale di San Cataldo</h2>
+            <span>La cattedrale di San Cataldo (o duomo di San Cataldo) è la cattedrale della arcidiocesi di Taranto ed è la più antica cattedrale romanica pugliese. Inizialmente dedicata a Santa Maria Maddalena poi a San Cataldo Vescovo.</span>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/20.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Cattedrale di San Cataldo</h2>
+            <span>La cattedrale di San Cataldo (o duomo di San Cataldo) è la cattedrale della arcidiocesi di Taranto ed è la più antica cattedrale romanica pugliese. Inizialmente dedicata a Santa Maria Maddalena poi a San Cataldo Vescovo.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/21.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Cattedrale di San Cataldo</h2>
+            <span>La cattedrale di San Cataldo (o duomo di San Cataldo) è la cattedrale della arcidiocesi di Taranto ed è la più antica cattedrale romanica pugliese. Inizialmente dedicata a Santa Maria Maddalena poi a San Cataldo Vescovo.</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/22.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Cattedrale di San Cataldo</h2>
+            <span>La cattedrale di San Cataldo (o duomo di San Cataldo) è la cattedrale della arcidiocesi di Taranto ed è la più antica cattedrale romanica pugliese. Inizialmente dedicata a Santa Maria Maddalena poi a San Cataldo Vescovo.</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/23.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Cattedrale di San Cataldo</h2>
+            <span>La cattedrale di San Cataldo (o duomo di San Cataldo) è la cattedrale della arcidiocesi di Taranto ed è la più antica cattedrale romanica pugliese. Inizialmente dedicata a Santa Maria Maddalena poi a San Cataldo Vescovo.</span>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- fine carosello -->
+
+      <a class="carousel-control-prev"  href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <div style="background-color: #3686e3">
+          <span class="carousel-control-prev-icon" style="width: 45px; height: 45px;" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </div>
+
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <div style="background-color: #3686e3">
+          <span class="carousel-control-next-icon" style="width: 45px; height: 45px;"></span>
+          <span class="sr-only">Next</span>
+        </div>
+
+      </a>
+
+
     </div>
-
-    <a class="carousel-control-prev"  href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <div style="background-color: #3686e3">
-        <span class="carousel-control-prev-icon" style="width: 45px; height: 45px;" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </div>
-
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <div style="background-color: #3686e3">
-        <span class="carousel-control-next-icon" style="width: 45px; height: 45px;"></span>
-        <span class="sr-only">Next</span>
-      </div>
-
-    </a>
-
-
   </div>
-</div>
 </div>
 
 </body>
