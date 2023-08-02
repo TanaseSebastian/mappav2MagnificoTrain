@@ -1,0 +1,367 @@
+<!--key: "AIzaSyA-z-tEkDMKIwwAhDz8EYkYPhb5ja-51PA"-->
+
+<html>
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+  <title>Map Magnifico Train</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="module" src="./js/index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+
+<div class="pos-f-t" id="barraNavigation">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      <h4 class="text-white">Collapsed content</h4>
+      <span class="text-muted">Toggleable via the navbar brand.</span>
+    </div>
+  </div>
+  <nav class="navbar  **fixed-top**  navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" >
+     <a> <img class="bandiera"  height="30px" src ="./img/italia.png" style="position:relative;"></a>
+    </button>
+    <button class="navbar-toggler" type="button" >
+    <a href="english.html"><img class="bandiera"  height="30px" src ="./img/inglese.png" style="position:relative;"></a>
+    </button>
+    <button class="navbar-toggler" type="button" >
+      <img class="bandiera"  height="30px" src ="./img/tedesco.jpeg" style="position:relative;">
+    </button>
+    <button class="navbar-toggler" type="button" >
+      <img class="bandiera"  height="30px" src ="./img/france.png" style="position:relative;">
+    </button>
+    <button class="navbar-toggler" type="button" >
+    <img class="bandiera"  height="30px" src ="./img/spagnolo.jpeg" style="position:relative;">
+    </button>
+  </nav>
+</div>
+
+
+<div class="sfondo">
+<!--The div element for the map -->
+<div id="map"></div>
+
+
+
+
+  <div class="audioDiv">
+  <h2 style="text-align: center; font-size: 1.5em">Audioguida</h2>
+  <audio controls style="margin: 5% 5%; width: 90%;">
+    <source src="music/audio-eng.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  </div>
+</div>
+
+<div class="sfondo2">
+  <div id="carouselExampleIndicators" style="height: max-content" class="carousel slide" data-interval="false">
+    <ol class="carousel-indicators" style="visibility: hidden">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+
+
+    <!-- inizio carosello -->
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="place-description">
+        <!--<div><img class="d-block w-100 image-carosello" src="./FOTO/.png" alt="First slide"></div>-->
+          <div class="content_color">
+            <h2>Willkommen an Bord des Touristenzugs von Taranto!</h2>
+            <span>Taranto, die Hauptstadt der gleichnamigen apulischen Provinz, überblickt den Golf des Ionischen Meeres und zurück, als sie von Siedlern aus Sparta gegründet wurde und später zu einem der aktivsten Zentren ist aufgrund der Tatsache, dass sie sich zwischen dem Mar Grande und dem Mar Piccolo erstreckt, als "Stadt der zwei Meere" bekannt. Ihre Entstehung geht auf das Jahr 706 v. Chr. zurück, als sie von Siedlern aus Sparta gegründet wurde und später zu einem der aktivsten Zentren der gesamten Magna Graecia wurde. Im Laufe der Jahrhunderte gewann die Stadt an strategischer Bedeutung und wurde zu einem der wichtigsten Häfen im Mittelmeerraum. Die Stadt ist in drei Teile gegliedert: den "borgo antico" oder die Altstadt, die auf einer Insel liegt und an einem Ende durch eine Brücke, die "ponte di pietra" (Steinbrücke), mit dem Industrieviertel verbunden ist, und am anderen Ende durch die so genannte "borgo Umbertino" über die so genannte "Drehbrücke".</span>
+          </div>
+           </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/2.png" alt="Second slide"></div>
+          <div class="content_color">
+            <h2>Ponte girevole des Heiligen Franziskus von Paola</h2>
+            <span>Die Brücke, die wir gerade überqueren, ist als "Ponte girevole" bekannt, so genannt wegen der Möglichkeit, sie für die Durchfahrt von Schiffen zu öffnen. Ihre Struktur verbindet die Insel Borgo Antico mit der Halbinsel Borgo Nuovo. Die Brücke wurde am 22. Mai 1887 eingeweiht und überspannt einen 375 m langen, 73 m breiten und 12 m tiefen schiffbaren Kanal, der das grossen Meer mit dem kleinen Meer verbindet, in seiner Achse. Ursprünglich wurde sie mit hydraulischen Turbinen betrieben, die von einem großen Stausee angetrieben wurden. Nach einer Modernisierung in den Jahren 1957-58 wurde ein elektrischer Betrieb eingeführt. Die Drehbrücke ist das Wahrzeichen der Stadt Taranto und kann aufgrund ihrer Einzigartigkeit als bewundernswertes Werk der Schifffahrtstechnik angesehen werden. Außerdem ist die Durchfahrt der Schiffe mit ihren Besatzungen über die Brücke ein sehr eindrucksvoller Moment für Familie und Freunde, die ihre Lieben vom Ufer aus begrüßen.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/3.png" alt="Second slide"></div>
+          <div class="content_color">
+          <h2>Schloss Archita </h2>
+          <span>Wir setzen nun die Erklärungen an Bord des kleinen Zuges fort! Als wir wieder die Drehbrücke überqueren, ist es unmöglich, den imposanten Palast vor uns nicht zu bemerken: es ist der sogenannte Archita-Palast oder Palazzo degli Uffici. Die Hauptfassade, die sich in der Achse der Brücke befindet, zeichnet sich durch perfekte Symmetrien und das Streben nach Gleichgewicht aus, das durch das breite dorische Gebälk, die Fensterreihen und das Tympanon mit der mechanischen Uhr noch mehr in Szene gesetzt wird. Der nüchterne und wohlproportionierte architektonische Stil des Neoklassizismus wurde zu einem inspirierenden Modell für viele andere Gebäude, die in der Zwischenzeit gebaut wurden. Der Palast wurde auf königlichen Erlass von König Ferdinand von Bourbon erbaut, um die Waisenkinder der Stadt aufzunehmen, und beherbergt heute das Liceo Archita, in dem Aldo Moro, einer der berühmtesten Politiker der italienischen Geschichte, studierte.</span>
+        </div>
+      </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="place-description">
+        <div><img class="d-block w-100 image-carosello" src="./FOTO/4.png" alt="Third slide"></div>
+          <div class="content_color">
+          <h2>Denkmal für den Seemann</h2>
+          <span>Wenn man sich nach rechts wendet, stößt man auf das Monumento al Marinaio, eines der Denkmäler im Borgo Nuovo der Stadt. Es ist den Matrosen der italienischen Marine gewidmet und wurde 1974 von dem Bildhauer Vittorio Di Cobertaldo aus Bronze geschaffen und der Stadt gestiftet, die Schauplatz der berühmten "Nacht von Taranto" war. Die etwa sieben Meter hohe Skulptur, die auf einem Sockel steht, zeigt zwei Matrosen, die die Boote grüßen, die im Begriff sind, die Fahrrinne zu überqueren, die das Mar Grande mit dem Meeresmeer verbindet. Kanal, der das Mar Grande mit dem Mar Piccolo verbindet, und heben mit der rechten Hand die typische Mütze.</span>
+        </div>
+      </div>
+    </div>
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/5.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Regierungsgebäude</h2>
+            <span>Auf dem Weg zum Ende der Strecke sehen wir links das imposante, 52 Meter hohe Regierungsgebäude. Es wurde aus braunem Carparo-Stein auf den Ruinen eines Theaters errichtet. Es wurde am 7. September 1934 von Benito Mussolini eingeweiht, vor einer Menge von Bürgern, die den Kreisverkehr vor dem Gebäude bevölkerten. Äußerlich nimmt der Palast die imposanten Formen eines idealen befestigten römischen Castrums an, jedoch in der neuen, großspurigen und propagandistischen Form, die für den Monumentalismus des Regimes typisch war: An der Fassade befindet sich eine Loggia mit zwei bronzenen Adlern auf zylindrischen Sockeln, während an den Seiten des Haupttors Reliefs mit bewaffneten nackten Figuren und zwei riesige römische Trophäen mit Wappen, die von Siegen überragt werden, zu sehen sind.</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/7.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Kirche San Francesco di Paola</h2>
+            <span>Uns gegenüber steht die Kirche San Francesco di Paola im Rokokostil, die ab 1623 auf Veranlassung des Mönchs Ludovico Montefuscoli errichtet wurde. Nach einem schweren Erdbeben im Jahr 1743 wurde die Fassade mehrmals umgebaut, zuletzt im Jahr 1956. Heute ist die Kirche ein Wallfahrtsort für die Anhänger des heiligen Franziskus und vor allem dafür bekannt, dass sie während der Karwoche Gastfreundschaft für die Prozession der heiligen Geheimnisse bietet.</span>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/8.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Maritimes Militärarsenal</h2>
+            <span>Hinter dem Tor vor uns befindet sich das Maritime Militärarsenal von Taranto, eines von drei noch aktiven Arsenalen der italienischen Marine. Es erstreckt sich über eine Fläche von etwa 90 Hektar und überblickt das Mar Piccolo. Durch das Tor kann man das Hauptgebäude im neoklassischen Umbertino-Stil sehen, in dem sich die Mostra Storica Arsenale (Mo.S.A.) befindet, eine Dauerausstellung mit Erinnerungsstücken an die Marine, die seit 1979 aktiv ist und von Montag bis Freitag nach Vereinbarung besucht werden kann. Der Bau des maritimen Militärarsenals von Tarent wurde im Juni 1882 vom italienischen Parlament beschlossen, um dem wachsenden Verteidigungsbedarf Italiens im Mittelmeerraum zu begegnen. Die Arbeiten begannen im September 1883 und wurden sechs Jahre später abgeschlossen. Das Arsenal wurde am 21. August 1889 in Anwesenheit von Umberto I. von Savoyen eingeweiht. Aufgrund seiner Größe und Lage hatte das Arsenal großen Einfluss auf die Stadtentwicklung des modernen Tarent. Auch für den Bau von Kriegsschiffen konzipiert, gab es während und nach den beiden Weltkriegen einen entscheidenden Beitrag zur Instandsetzung und zum Wiederaufbau von militärischen und zivilen militärischen und zivilen Einheiten, sowohl auf nationaler als auch auf alliierter Seite.</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/9.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Villa Peripato</h2>
+<span>Zu unserer Rechten befinden sich die Giardini Peripato, einer der wichtigsten Parks der Stadt. Sie nehmen eine Fläche von fast 5 Hektar ein und liegen im Borgo Umbertino, in der Nähe des Mar Piccolo. Der Name bezieht sich auf die Schule des Aristoteles (aus dem Griechischen perìpatos), deren bedeutender Vertreter der Tarentiner Wissenschaftler und Politiker Archita war. Ursprünglich im Besitz der Familie de Beaumont, gingen die Giardini Peripato 1913 in den Besitz der Stadt Tarent über, die eine Gemeinschaftsvilla schaffen wollte: Sitze, Säulen, Treppen und sogar eine Büste von Leonardo da Vinci, die von einem im Ersten Weltkrieg im kleinen Meer gesunkenen Schiff stammt, wurden dort aufgestellt. Die Villa Peripato ist auch ein wichtiges archäologisches Gebiet, denn sie beherbergt Reste von Wohngebäuden aus der frühen Kaiserzeit.</span>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/10.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Archäologisches Nationalmuseum in Taranto</h2>
+          <span>Zu unserer Rechten befindet sich das Archäologische Nationalmuseum von Taranto, das 1887 gegründet wurde und heute eines der bedeutendsten archäologischen Museen der Welt ist. Hier ist eine der wichtigsten Sammlungen von Artefakten aus der Zeit der Magna Graecia ausgestellt, darunter die berühmten "Ori di Taranto", eine Museumssammlung von Schmuckstücken wie Ringen, Ohrringen, Armbändern und kostbarem Schmuck aus hellenistischer und römischer Zeit. Das Museum besteht aus zehn Sälen im ersten Stock und fünfzehn Sälen im zweiten Stock, die es ermöglicht haben, einen chronologischen Ausstellungsparcours zu schaffen, der von der neolithischen Phase des Gebiets von Tarent über die griechische Kolonisation, die römische Zivilisation und die spätantike Stadt bis hin zur byzantinischen Zeit reicht. Das Museum kann nach Vereinbarung von Dienstag bis Sonntag, auch an Feiertagen, von 8.30 bis 19.30 Uhr besucht werden.</span>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/11.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Pfarrei San Giuseppe</h2>
+            <span>Die Altstadt von Taranto ist in vier Teile unterteilt, die als "pittaggi" bezeichnet werden und im Laufe der Jahrhunderte bedeutende städtebauliche Eingriffe erfahren haben. Die Kirche San Giuseppe, die wir links sehen, befindet sich in dem als Turripenne bekannten Viertel und wurde zwischen 1640 und 1641 dem Heiligen Josef geweiht. Während des Faschismus wurde sie im Rahmen der Sanierung der Altstadt als einzige der vier Kirchen des Viertels nicht abgerissen.</span>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/12.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Jugendstil-Pensilina</h2>
+            <span>Auch in der Altstadt finden wir weitere Jugendstilreferenzen. Der Jugendstil-Unterstand in der Altstadt, der sich rechts befindet, ist eines der bekanntesten Postkartenmotive von Tarent. So genannt wegen ihrer Merkmale, die sich an der realen und an der schlechten Architektur orientieren, steht sie derzeit im Mittelpunkt eines Projekts zur Wiederbelebung der gesamten Insel. Es soll nicht mehr nur eine Blechhülle sein, sondern ein touristisches Anziehungspunkt, der die Schönheit der Altstadt aufwertet.</span>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/13.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Ponte di Pietra</h2>
+            <span>Wir überqueren nun die "Ponte di Porta Napoli" (oder Steinbrücke), die die Altstadt mit dem Industriegebiet verbindet. Sie ist aus Stein gebaut und überspannt den natürlichen Kanal im Nordwesten der Stadt. Die 115 m lange und 16 m breite Brücke mit nur drei Bögen ist dem Heiligen Ägidius von Tarent gewidmet. Die heutige Brücke wurde gebaut, nachdem eine Überschwemmung im Jahr 1883 die Brücke mit sieben Bögen zerstört hatte, die in einer anderen Achse als die heutige verlief, um die Stadt besser vor den häufigen Übergriffen von außen zu schützen.</span>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/14.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Porto mercantile</h2>
+            <span>Auf der rechten Seite befindet sich der Hafen von Taranto, einer der ersten in Italien für den Frachtverkehr, der an der Nordküste des gleichnamigen Golfs liegt und sowohl kommerziell als auch strategisch eine wichtige Rolle spielt. Die Anlagen des Handels- und Industriehafens verteilen sich auf den nordwestlichen Teil des Mar Grande und unmittelbar westlich davon. Im Mar Grande gibt es auch eine Anlage für den Transport von Rohöl zur Versorgung der Raffinerie durch Unterwasserpipelines.</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/15.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Yachthafen</h2>
+            <span>Taranto hat auch einen Jachthafen. Er befindet sich im Bereich des Molo Sant'Eligio, in dem Teil des Borgo Antico, der auf das Mar Grande blickt: Von hier aus kann man zahlreiche Elemente von historischer, kultureller, archäologischer und architektonischer Bedeutung betrachten, die die gesamte Insel prägen. Die Anlage bietet 254 Liegeplätze und ist mit festen und schwimmenden Kais, einem Kai und einer Helling, Lagerplätzen, Parkplätzen und Grünanlagen ausgestattet. Außerdem gibt es einen Empfangs- und Erfrischungsdienst sowie alle Dienstleistungen, die mit dem nautischen Tourismus zusammenhängen: Anlegen, Reparaturen, Betankung, Touristeninformation sowie Freizeit-, Sport-, Kultur- und Kunstaktivitäten.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/16.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Torre dell’orologio</h2>
+            <span>Uns gegenüber steht der Uhrenturm, eines der Denkmäler der Altstadt. Er wurde in der zweiten Hälfte des 18. Jahrhunderts erbaut und ist das einzige noch erhaltene Bauwerk der so genannten "Cittadella". Der fortschrittliche polygonale Körper wurde 1799 hinzugefügt, während die Glocken 1756 und 1818 angefertigt wurden, die kleinere bzw. die größere. Die mechanische Uhr an der Hauptfassade wurde im späten 19. Jahrhundert von neapolitanischen Handwerkern gebaut.</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/17.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Kirche von San Domenico Maggiore</h2>
+            <span>Zu unserer Linken steht die Kirche San Domenico, eine romanisch-gotische Kirche an der Westfront des historischen Zentrums, deren Bau um 1360 abgeschlossen wurde. Die Dominikaner ließen sich hier in der ersten Hälfte des 14. Jahrhunderts nieder, wobei das Jahr 1349 in den Archiven des Ordens verzeichnet ist. Bei Ausgrabungen in den 1990er Jahren wurden jedoch Spuren einer Besiedlung des Ortes gefunden, die bis in die Jungsteinzeit des 6. Den Haupteingang erreicht man über eine Barocktreppe, die gegen Ende des 18. Jahrhunderts in der Mitte der Fassade errichtet wurde. Die Kirche hat vier Kapellen und eine monumentale Apsis, in der Tommaso de Sarria, Erzbischof von Taranto zwischen 1665 und 1685, begraben ist.</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/18.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Kathedrale von San Cataldo</h2>
+            <span>Zu unserer Rechten sehen wir die Kathedrale von San Cataldo, die älteste Kathedrale Apuliens. Sie wurde von den Byzantinern in der zweiten Hälfte des 10. Jahrhunderts im Zuge des Wiederaufbaus der Stadt im Auftrag des Kaisers, der als zweiter Gründer von Tarent gilt, errichtet. Die Kathedrale und ihre Krypta wurden aus den Abfällen früherer, typisch griechischer und römischer Bauten errichtet. Man beachte, dass die Säulen der Kathedrale unterschiedlich sind und aus verschiedenen Materialien und Größen bestehen. In den letzten Jahren des 11. Jahrhunderts wurde der byzantinische Grundriss umgestaltet, und die heutige Kathedrale mit dem Grundriss einer Basilika wurde in der normannischen Zeit erbaut, während die Barockfassade 1713 hinzugefügt wurde. Die wichtigsten Merkmale der Kathedrale sind der so genannte "Cappellone" von San Cataldo, der aus einer viereckigen Vorhalle und einer elliptischen Kapelle besteht, sowie das Bodenmosaik, das 1160 von dem Mosaizisten Petroius geschaffen wurde. Im Inneren befinden sich acht Statuen von Giuseppe Sanmartino, dem gleichen Bildhauer wie der verschleierte Christus in Neapel. Die Krypta stammt höchstwahrscheinlich aus der byzantinischen Phase und hat einen kreuzförmigen Grundriss.</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/19.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Museum des spartanischen Hypogäums in Tarent</h2>
+            <span>Während wir diese Straße mit ihrem bezaubernden Blick auf das Meer entlangfahren, sehen wir zu unserer Linken wichtige Gebäude aus verschiedenen Epochen. Das erste beherbergt das Museo Ipogeo Spartano (MISpa), das nach dem Castello Aragonese und dem Archäologischen Museum MarTa das drittmeistbesuchte historische Bauwerk der Stadt ist. Das Museum wurde als historische und kulturelle Aufwertung der unteren unterirdischen Struktur des Adelspalastes de Beaumont Bonelli gegründet, der auch als Ipogeo Bellacicco bekannt ist, in Anlehnung an den Namen der Familie, die das Gebäude im Jahr 2002 gekauft und renoviert hat und nun besichtigt werden kann. Das Hypogäum, in dem das Museum untergebracht ist, geht auf einen Steinbruch zurück, in dem Carparo abgebaut wurde, ein Material, das bereits 700 v. Chr. von den Griechen Spartas für den Bau von Tempeln und Stadtmonumenten verwendet wurde. Im Laufe der Jahrhunderte wurde die Struktur von den verschiedenen Völkern, die die Stadt bewohnten, mehrfach angepasst.</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/20.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>D'Ayala Valva Palast</h2>
+            <span>Als Nächstes folgt der Ayala-Valva-Palast, das prächtigste Gebäude der Altstadt. Er wurde im 18. Jahrhundert von Don Ignazio Marrese erbaut, der ihn nicht nur zu seinem Wohnsitz machte, sondern auch zu einer schönen Residenz, in der er die Minister, Offiziere und Untergebenen des Königs beherbergte. Der Palast überblickt das Mar Grande. 1800 wurde er von der spanischstämmigen Familie d'Ayala Valva erworben, die ihn grundlegend umgestaltete, so dass er nun nicht mehr nur den Charakter des 18. Jahrhundert. 1981 wurde der Palast von der Denkmalschutzbehörde unter die Bestimmungen zum Schutz des künstlerischen Erbes gestellt, und 1982 wurde er von der Gemeinde enteignet, um seine Strukturen zu konsolidieren, seine Innenräume zu restaurieren und ihn in das Ethnographische Museum Alfredo Majorano zu verwandeln.</span>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/21.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Das Rathaus </h2>
+            <span>Am Ende der Straße befindet sich das Rathaus, ein Bauwerk aus dem 16. Jahrhundert, das an den Ecken mit vier Türmen befestigt ist. Jahrhundert, das an den Ecken mit vier Türmen befestigt ist. 1929 wurde eine Konsolidierung des Gebäudes notwendig, die auch Änderungen an der Hauptfassade zur Folge hatte, die erhöht wurde, um die Uhr unterzubringen. Weitere Arbeiten zur Konsolidierung aller Stockwerke und zur Restaurierung der Fassaden wurden 1979 durchgeführt.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/22.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Dorische Säulen</h2>
+            <span>Etwas weiter links stehen die dorischen Säulen, feierlich und majestätisch, die eine jahrhundertealte Geschichte erzählen. Sie stammen aus dem ersten Viertel des 6. Jh. v. Chr., wurden aus lokalem Karparo gefertigt, das von der Akropolis selbst geschnitzt wurde, und sind jeweils 8,47 m hoch, mit einem Durchmesser von 2,05 m und einem Radstand von 3,72 m. Sie sind jedoch der einzige Beweis für die Existenz des dorischen Poseidon-Tempels, da andere Funde beim späteren Abriss des Klosters im Jahr 1926 verloren gingen. des Klosters im Jahr 1926 und der nahe gelegenen Kirche im Jahr 1973 verloren gingen.</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+          <div><img class="d-block w-100 image-carosello" src="./FOTO/23.png" alt="Third slide"></div>
+          <div class="content_color">
+            <h2>Aragonesische Burg</h2>
+            <span>Zu unserer Rechten befindet sich die Castello Aragonese, die mit ihrem viereckigen Grundriss und dem großen Innenhof den äußersten Winkel der Insel einnimmt, auf der sich die Altstadt befindet. Sie blickt auf eine lange Geschichte zurück, wie jüngste Ausgrabungen belegen. Die früheren griechischen, byzantinischen und normannisch-schwäbisch-angelvinischen Strukturen sind noch lesbar und können während der Führung besichtigt werden. Die neue Burg aus der Zeit der Aragonier wurde in den Jahren zwischen 1487 und 1492 nach den neuen Kriterien, die sich aus der Verbesserung der Artillerie ergaben, umgebaut. Es scheint, dass das vom König von Neapel, Ferdinand von Aragon, in Auftrag gegebene Umbauprojekt unter direkter oder, was wahrscheinlicher ist, indirekter Beteiligung des großen sienesischen Architekten Francesco di Giorgio Martini durchgeführt wurde. Charakteristisch sind die zylindrischen Türme und die inneren Gänge. Interessant ist die Renaissance-Kapelle des Heiligen Leonard im Inneren. Jetzt aufgepasst!</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <div class="place-description">
+         <!-- <div><img class="d-block w-100 image-carosello" src="./FOTO/23.png" alt="Third slide"></div>-->
+          <div class="content_color">
+            <h2>Ende des Laufs</h2>
+            <span>Es ist Zeit auszusteigen, um mit der einstündigen Führung im Inneren des Schlosses fortzufahren. Wir bitten Sie, auf unseren Reiseleiter zu warten, um sicher aussteigen zu können.</span>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- fine carosello -->
+
+    <a class="carousel-control-prev"  href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <div>
+        <span class="carousel-control-prev-icon fixed-carousel-arrow" style="width: 45px; height: 45px; background-color:#3686e3 " aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </div>
+
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <div>
+        <span class="carousel-control-next-icon fixed-carousel-arrow" style="width: 45px; height: 45px; background-color:#3686e3 "></span>
+        <span class="sr-only">Next</span>
+      </div>
+
+    </a>
+
+
+  </div>
+</div>
+
+</div>
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <span class="mb-0">&copy; 2023 Magnifico Train. Tutti i diritti riservati.</span>
+</footer>
+</body>
+<!-- prettier-ignore -->
+<script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+({key: "AIzaSyA-z-tEkDMKIwwAhDz8EYkYPhb5ja-51PA", v: "beta"});</script>
+
+</html>
