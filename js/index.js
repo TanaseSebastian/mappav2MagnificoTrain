@@ -1,5 +1,9 @@
 
 //--------------------------
+// Controlla la larghezza della finestra per determinare se è desktop o mobile
+const isDesktop = window.innerWidth >= 992; // Usa la larghezza minima per desktop (es. 992px)
+
+
 
 // Initialize and add the map
 let map;
@@ -87,7 +91,7 @@ async function initMap() {
   const position_taranto = { lat: 40.469219, lng: 17.240061 };
 
   //location of 1st step
-  const position_1 = {lat: 40.471702, lng: 17.239620};
+  const position_8 = {lat: 40.473477, lng: 17.238421};
   // Request needed libraries.
   //@ts-ignore
   const { Map } = await google.maps.importLibrary("maps");
@@ -95,18 +99,32 @@ async function initMap() {
 
 
 
-  // The map, centered at Taranto
-  map = new Map(document.getElementById("map"), {
-    zoom: 14,
-    center: myLatLng,
-    mapId: "DEMO_MAP_ID",
-    gestureHandling: "greedy",
-    disableDefaultUI: true,
-  });
+  if(isDesktop){
+    // The map, centered at Taranto
+    map = new Map(document.getElementById("map"), {
+      zoom: 15,
+      center: position_8,
+      mapId: "DEMO_MAP_ID",
+      gestureHandling: "greedy",
+      disableDefaultUI: true,
+    });
+  }else{
+    // The map, centered at Taranto
+    map = new Map(document.getElementById("map"), {
+      zoom: 14,
+      center: myLatLng,
+      mapId: "DEMO_MAP_ID",
+      gestureHandling: "greedy",
+      disableDefaultUI: true,
+    });
+  }
+
 
   map.setMapTypeId('satellite');
 
-  let size = 50;
+
+  // Imposta la variabile 'size' in base al tipo di visualizzazione
+  let size = isDesktop ? 70 : 50;
   /*
   let withScreen = screen.width;
   console.log(withScreen);
