@@ -310,7 +310,7 @@ iframe {
 @media (max-width: 768px) {
   .video-container {
     width: 95%; /*!* Larghezza al 100% in versione mobile *!*/
-    height: calc(94vw * 310 / 560);
+    height: calc(96.3vw * 310 / 560);
   }
 }
 
