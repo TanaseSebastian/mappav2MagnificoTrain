@@ -169,6 +169,7 @@ async function initMap() {
       zoom: 15,
       center: position_8,
       mapId: "DEMO_MAP_ID",
+      gestureHandling: "greedy",
       disableDefaultUI: true,
     });
   }else{
@@ -177,6 +178,7 @@ async function initMap() {
       zoom: 14,
       center: position_4,
       mapId: "DEMO_MAP_ID",
+      gestureHandling: "greedy",
       disableDefaultUI: true,
     });
   }
@@ -292,7 +294,7 @@ async function initMap() {
       // then, remove the infowindows name from the array
     });
   });
-  
+
   new google.maps.Marker({
     position: myLatLng,
     map,
@@ -304,7 +306,7 @@ async function initMap() {
     infoWindow.setContent("CAPOLINEA");
     infoWindow.open(marker.getMap(), marker2);
   });
-  
+
 }
 
 
