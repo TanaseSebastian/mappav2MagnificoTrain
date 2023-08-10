@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Cardo|Pathway+Gothic+One");
+html{
+  scroll-behavior: smooth;
+}
 .timeline {
   display: flex;
   margin: 0 auto;
