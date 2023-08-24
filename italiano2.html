@@ -54,7 +54,7 @@
       <br><br><br>
 
 
-      <h3 class="timeline-header__subtitle">MAPPA INTERATTIVA 3D: Di seguito troviamo il tragitto che svolgeremo con le varie tappe!</h3>
+      <h3 id="map_title" class="timeline-header__subtitle">MAPPA INTERATTIVA 3D: Di seguito troviamo il tragitto che svolgeremo con le varie tappe!</h3>
       <br><br>
       <!--qui mettiamo la mappa-->
 
@@ -242,7 +242,7 @@
           </p>
         </div>
       </div>
-      <div class="timeline-item" data-text="13. Porto turistico">
+      <div class="timeline-item" data-text="13. Porto Turistico">
         <div class="timeline__content"><img class="timeline__img" src="./FOTO/13.png"/>
           <h2 class="timeline__content-title">13. Porto turistico</h2>
           <br><br>
@@ -256,7 +256,7 @@
           </p>
         </div>
       </div>
-      <div class="timeline-item" data-text="14. Torre dell’orologio">
+      <div class="timeline-item" data-text="14. Torre dell'Orologio">
         <div class="timeline__content"><img class="timeline__img" src="./FOTO/14.png"/>
           <h2 class="timeline__content-title">14. Torre dell’orologio</h2>
           <br><br>
@@ -372,13 +372,34 @@
 
     </div>
   </div>
+  <button class="scroll-to-top" id="scrollToTopBtn">
+    <img src="img/arrow.png" alt="Freccia verso l'alto" style="width: 25px; height: 25px">
+  </button>
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">
     <span class="mb-0">&copy; 2023 Magnifico Train. Tutti i diritti riservati.</span>
   </footer>
 </div>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="./scriptItaliano2.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script  src="./scriptItaliano2.js"></script>
+<script>
+  const scrollToTopButton = document.getElementById('scrollToTopBtn');
 
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      scrollToTopButton.style.display = 'block';
+    } else {
+      scrollToTopButton.style.display = 'none';
+    }
+  });
+
+  scrollToTopButton.addEventListener('click', () => {
+    const mapElement = document.getElementById('map_title');
+    if (mapElement) {
+      mapElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+</script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {

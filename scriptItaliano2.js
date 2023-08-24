@@ -169,7 +169,7 @@ async function initMap() {
       zoom: 15,
       center: position_8,
       mapId: "DEMO_MAP_ID",
-      gestureHandling: "greedy",
+      /*gestureHandling: "greedy",*/
       disableDefaultUI: true,
     });
   }else{
@@ -178,7 +178,7 @@ async function initMap() {
       zoom: 14,
       center: position_4,
       mapId: "DEMO_MAP_ID",
-      gestureHandling: "greedy",
+      /*gestureHandling: "greedy",*/
       disableDefaultUI: true,
     });
   }
@@ -215,10 +215,10 @@ async function initMap() {
     [{ lat: 40.47250185304242, lng: 17.239217162132267 }, "Palazzo Archita"],
     [{ lat: 40.471873, lng: 17.235655 }, "Monumento al Marinaio"],
     [{ lat: 40.470849, lng: 17.238052 }, "Palazzo del Governo"],
-    [{ lat: 40.469160, lng: 17.248284 }, "Parrocchia San Francesco di Paola"],
+    [{ lat: 40.469160, lng: 17.248284 }, "Chiesa di San Francesco di Paola"],
     [{ lat: 40.469641, lng: 17.252364 }, "Arsenale Militare Marittimo"],
     [{ lat: 40.473885, lng: 17.242067 }, "Villa Peripato"],
-    [{ lat: 40.473477, lng: 17.238421 }, "Museo Archeologico Nazionale di Taranto (MArTa)"],
+    [{ lat: 40.473477, lng: 17.238421 }, "Museo Archeologico Nazionale di Taranto"],
     [{ lat: 40.476113, lng: 17.231093 }, "Parrocchia San Giuseppe"],
     [{ lat: 40.478982, lng: 17.228322 }, "Pensilina Liberty"],
     [{ lat: 40.480108, lng: 17.226752 }, "Ponte di Pietra"],
@@ -270,10 +270,13 @@ async function initMap() {
 
 */
     google.maps.event.addListener(marker, 'click', function () {
+      const targetDataText = marker.title;
+      const targetElement = document.querySelector(`.timeline-item[data-text="${targetDataText}"]`);
+      /*const targetElement = document.querySelector('.timeline__content-title:contains("' + targetDataText + '")');*/
       console.log(marker.position);
       map.setZoom(17);
       map.panTo(marker.position);
-
+      targetElement.scrollIntoView({ behavior: 'smooth' });
       //map.setZoom(20);
       if( prev_infowindow ) {
         pauseTrack()
@@ -281,10 +284,10 @@ async function initMap() {
       }
       prev_infowindow = infowindow;
       //infowindow.open(map, marker);
-      doEveryThing();
+      //doEveryThing();
     });
     infowindow.close();
-    google.maps.event.addListener(map, 'click', function() {
+    /*google.maps.event.addListener(map, 'click', function() {
       pauseTrack();
       infowindow.close();
     });
@@ -292,7 +295,7 @@ async function initMap() {
       pauseTrack();
       //currentMark.setMap(null); //removes the marker
       // then, remove the infowindows name from the array
-    });
+    });*/
   });
 
   new google.maps.Marker({

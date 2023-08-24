@@ -364,3 +364,19 @@ button.navbar-toggler{
     width: 50px;
   }
 }
+
+
+
+/* per il bottone che riscolla in alto*/
+/* Stile del pulsante */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  display: none;
+}
