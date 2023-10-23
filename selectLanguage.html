@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Esplora Taranto con  Magnifico Train. Tour in trenino turistico per scoprire le attrazioni principali della città. Prenota il tuo tour oggi!">
+  <meta name="keywords" content="magnifico train, taranto, tour trenino, trenino turistico">
+  <meta name="author" content="Il Tuo Nome">
+  <meta name="robots" content="index, follow">
+  <title>Magnifico Train Taranto - Tour in Trenino a Taranto</title>
+  <link rel="canonical" href="https://www.magnificotrain.it/">
+  <style>
+
+    html{
+      background-image: url('img/sfondo.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+    }
+
+    .flags {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .flags a {
+      margin-bottom: 10px;
+    }
+
+    #content {
+      padding: 20px;
+      background-color: #f0f0f0;
+      text-align: center;
+    }
+
+    img{
+      height: 120px;
+      width: 200px;
+      margin:10px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Seleziona la tua lingua</h1>
+  <div class="flags">
+    <div onclick="location.href='italiano2.html'">
+      <img id="italia-img" src="img/italia.png" alt="Italiano">
+    </div>
+    <div onclick="location.href='english.html'">
+      <img  id="inglese-img" src="img/inglese.png"  alt="English">
+    </div>
+    <div onclick="location.href='tedesco.html'">
+      <img id="tedesco-img" src="img/tedesco.jpeg"  alt="Deutsch">
+    </div>
+    <div>
+      <img id="france-img" src="img/france.png"  alt="Français">
+    </div>
+    <div onclick="location.href='spagnolo.html'">
+     <img id="spagnolo-img" src="img/spagnolo.jpeg"  alt="Español">
+    </div>
+
+
+  </div>
+</div>
+
+<script>
+  window.onload = function() {
+    var italiaImg = document.getElementById('italia-img');
+    italiaImg.src = "img/italia.png";
+    var ingleseImg = document.getElementById('inglese-img');
+    ingleseImg.src = "img/inglese.png";
+    var tedescoImg = document.getElementById('tedesco-img');
+    tedescoImg.src = "img/tedesco.jpeg";
+    var franceImg = document.getElementById('france-img');
+    franceImg.src = "img/france.png";
+    var spagnoloImg = document.getElementById('spagnolo-img');
+    spagnoloImg.src = "img/spagnolo.jpeg";
+
+  };
+</script>
+
+</body>
+</html>
