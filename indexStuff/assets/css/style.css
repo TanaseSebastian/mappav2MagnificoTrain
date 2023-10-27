@@ -529,7 +529,7 @@ h6 {
 
 @media (max-width: 768px) {
   #hero {
-    height: auto;
+    height: 100vh;
   }
 
   #hero h1 {
@@ -748,10 +748,18 @@ section {
 /*--------------------------------------------------------------
 # Cta
 --------------------------------------------------------------*/
-.cta {
-  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/taranto_lungo.jpeg") fixed center center;
+#ctaTaranto {
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/tarantoImage.jpeg") fixed center center;
   background-size: cover;
-  padding: 60px 0;
+  padding: 120px 0;
+  margin: 5%;
+}
+
+#ctaMargherita {
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/margheritaImage.jpeg") fixed center center;
+  background-size: cover;
+  padding: 120px 0;
+  margin:5%;
 }
 
 .cta h3 {
@@ -1612,4 +1620,122 @@ section {
 /* Stili per l'icona */
 .whatsapp-button i {
   margin-right: 10px;
+}
+
+
+/*---------------------------------------*/
+/*scorri in basso icon*/
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  position: relative;
+}
+
+/* Stile di base per la classe .containerIcon */
+.containerIcon {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  padding-top: 60vh; /* Impostato a 60vh per tutti i dispositivi */
+}
+
+/* Media query per schermi con larghezza massima di 768px */
+@media (max-height: 768px) {
+  .containerIcon {
+    padding-top: 35vh; /* Modifica del padding-top per schermi con larghezza massima di 768px */
+  }
+}
+
+/* Media query per schermi con larghezza massima di 480px */
+@media (max-height: 480px) {
+  .containerIcon {
+    padding-top: 25vh; /* Modifica del padding-top per schermi con larghezza massima di 480px */
+  }
+}
+
+/* Media query per schermi con larghezza massima di 768px */
+@media (min-height: 1024px) {
+  .containerIcon {
+    padding-top: 70vh; /* Modifica del padding-top per schermi con larghezza massima di 768px */
+  }
+}
+
+.chevron {
+  display: block;
+  margin: auto;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #fff;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+.text {
+  display: block;
+  margin: 80px auto 0% auto;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: .25;
+  animation: pulse 2s linear alternate infinite;
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
 }
