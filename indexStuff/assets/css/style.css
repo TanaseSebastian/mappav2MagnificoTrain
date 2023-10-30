@@ -1727,3 +1727,34 @@ section {
     opacity: 1;
   }
 }
+
+
+
+/* carosello*/
+/* Aggiungi questo CSS al tuo foglio di stile o nel tag <style> nel tuo file HTML */
+
+/* Aggiungi questo CSS al tuo foglio di stile o nel tag <style> nel tuo file HTML */
+
+#myCarousel {
+  max-height: 800px; /* Imposta un'altezza massima per il carosello, puoi regolarla secondo le tue esigenze */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#myCarousel .carousel-inner .item img {
+  width: 100%; /* Larghezza fissa per le immagini */
+  height: 50vh; /* Altezza fissa per le immagini */
+  object-fit: cover; /* Mantieni l'intera immagine visibile senza distorsioni */
+}
+
+
+/* Stili per dispositivi desktop */
+@media (min-width: 768px) {
+  #myCarousel .carousel-inner .item img {
+    width: 100%; /* Larghezza fissa per le immagini */
+    height: 70vh; /* Altezza fissa per le immagini */
+    object-fit: cover; /* Mantieni l'intera immagine visibile senza distorsioni */
+  }
+}
+
