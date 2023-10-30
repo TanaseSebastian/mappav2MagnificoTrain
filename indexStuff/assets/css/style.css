@@ -1626,7 +1626,7 @@ section {
 /*---------------------------------------*/
 /*scorri in basso icon*/
 
-.iconContainer {
+/*.iconContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1634,35 +1634,23 @@ section {
   position: relative;
 }
 
-/* Stile di base per la classe .containerIcon */
+!* Stile di base per la classe .containerIcon *!
 .containerIcon {
   position: absolute;
   width: 100vw;
   height: 100vh;
   text-align: center;
-  padding-top: 60vh; /* Impostato a 60vh per tutti i dispositivi */
+  padding-top: 60vh; !* Impostato a 60vh per tutti i dispositivi *!
 }
-
+*/
 /* Media query per schermi con larghezza massima di 768px */
-@media (max-height: 768px) {
-  .containerIcon {
-    padding-top: 35vh; /* Modifica del padding-top per schermi con larghezza massima di 768px */
-  }
+
+
+.containerIcon {
+  padding-top: 10vh;
 }
 
-/* Media query per schermi con larghezza massima di 480px */
-@media (max-height: 480px) {
-  .containerIcon {
-    padding-top: 25vh; /* Modifica del padding-top per schermi con larghezza massima di 480px */
-  }
-}
 
-/* Media query per schermi con larghezza massima di 768px */
-@media (min-height: 1024px) {
-  .containerIcon {
-    padding-top: 70vh; /* Modifica del padding-top per schermi con larghezza massima di 768px */
-  }
-}
 
 .chevron {
   display: block;
