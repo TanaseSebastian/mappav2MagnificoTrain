@@ -28,30 +28,20 @@
   <!-- Template Main CSS File -->
   <link href="indexStuff/assets/css/style.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-  <!-- =======================================================
-  * Template Name: Gp
-  * Updated: Jul 27 2023 with Bootstrap v5.3.1
-  * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
 
+
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top ">
-  <div class="container d-flex align-items-center justify-content-lg-between">
+  <div id="container-responsive-align" class="container d-flex align-items-center">
 
     <!--
           <h1 class="logo me-auto me-lg-0"><a href="index.html"><img src="indexStuff/assets/img/shortLogo-removebg-preview.png"><span>MI</span> Fitness World</a></h1>
     -->
 
-    <img class="mi_logo" src="indexStuff/assets/img/logo-circle.png" style="max-width: 100px; width: 10vw">
+    <img id="logo-mobile" class="mi_logo" src="indexStuff/assets/img/logo-circle.png" style="max-width: 100px; width: 10vw">
 
     <!--
           <h1 class="logo me-auto me-lg-0"><a href="index.html"><img src="indexStuff/assets/img/shortLogo-removebg-preview.png" style="width: 100%"></a></h1>
@@ -62,26 +52,19 @@
 
     <nav id="navbar" class="navbar order-last order-lg-0">
       <ul>
-        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+        <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
         <li><a class="nav-link scrollto" href="#about">Chi siamo</a></li>
         <li><a class="nav-link scrollto" href="#services">Servizi</a></li>
-        <li><a class="nav-link scrollto " href="#portfolio">Galleria</a></li>
-        <li><a class="nav-link scrollto" href="#team">Chi siamo</a></li>
-        <li class="dropdown"><a href="#"><span>Drop Down di esempio</span> <i class="bi bi-chevron-down"></i></a>
+        <!--<li><a class="nav-link scrollto " href="#portfolio">Galleria</a></li>-->
+        <img id="logo-desktop" class="mi_logo" src="indexStuff/assets/img/logo-circle.png" style="max-width: 100px; width: 10vw; margin: 30px;">
+        <li><a class="nav-link scrollto" href="#team" style="padding: 10px 0 10px 0px;">Team</a></li>
+        <li class="dropdown"><a href="#"><span>Servizi Offerti</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
-            <li><a href="#">Drop Down 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-              <ul>
-                <li><a href="#">Deep Drop Down 1</a></li>
-                <li><a href="#">Deep Drop Down 2</a></li>
-                <li><a href="#">Deep Drop Down 3</a></li>
-                <li><a href="#">Deep Drop Down 4</a></li>
-                <li><a href="#">Deep Drop Down 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Drop Down 2</a></li>
-            <li><a href="#">Drop Down 3</a></li>
-            <li><a href="#">Drop Down 4</a></li>
+            <li><a href="compleanni.html">Compleanni e Matrimoni</a></li>
+            <li><a href="gruppi-scuole.html">Gruppi e Scuole</a></li>
+            <li><a href="noleggio.html">Noleggio</a></li>
+            <li><a href="lavora-con-noi.html">Lavora con Noi</a></li>
+            <li><a href="spazi-pubblicitari.html">Spazi Pubblicitari</a></li>
           </ul>
         </li>
         <li><a class="nav-link scrollto" href="#contact">Contatti</a></li>
@@ -93,6 +76,40 @@
 
   </div>
 </header><!-- End Header -->
+
+<script>
+  // Ottieni riferimenti agli elementi da nascondere/mostrare
+  const container = document.getElementById('container-responsive-align');
+  const logoDesktop = document.getElementById('logo-desktop');
+  const logoMobile = document.getElementById('logo-mobile');
+
+  // Funzione per controllare la larghezza della finestra e nascondere/mostrare gli elementi di conseguenza
+  function checkWindowSize() {
+    const windowWidth = window.innerWidth;
+
+    // Rimuovi tutte le classi di allineamento e reimposta la visibilità dei loghi
+    container.classList.remove('justify-content-center', 'justify-content-lg-between');
+    logoDesktop.style.display = 'block';
+    logoMobile.style.display = 'block';
+
+    // Controlla se la larghezza della finestra è inferiore o uguale a 768px (tablet medio o mobile)
+    if (windowWidth <= 1306) {
+      // Sei su mobile
+      container.classList.add('justify-content-lg-between');
+      logoDesktop.style.display = 'none';
+    } else {
+      // Sei su desktop
+      container.classList.add('justify-content-center');
+      logoMobile.style.display = 'none';
+    }
+  }
+
+  // Chiama la funzione quando la finestra è completamente caricata
+  window.onload = checkWindowSize;
+
+  // Chiama la funzione quando la finestra viene ridimensionata
+  window.addEventListener('resize', checkWindowSize);
+</script>
 
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="d-flex align-items-center justify-content-center">
@@ -114,7 +131,7 @@
             <div class="chevron"></div>
             <div class="chevron"></div>
             <div class="chevron"></div>
-            <span class="text">Scroll down</span>
+            <span class="text">Scrolla in basso</span>
           </div>
         </div>
       </div>
@@ -200,23 +217,25 @@
         <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
           <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
             <i class="bx bx-receipt"></i>
-            <h4>Est labore ad</h4>
-            <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+            <h4>Tour Classici:</h4>
+            <p>Offriamo affascinanti tour ferroviari per esplorare destinazioni iconiche, fornendo informazioni storiche e culturali lungo il percorso.
+
+            </p>
           </div>
           <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
             <i class="bx bx-cube-alt"></i>
-            <h4>Harum esse qui</h4>
-            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+            <h4>Guide Esperte:</h4>
+            <p>Le nostre guide esperte arricchiscono l'esperienza, condividendo aneddoti interessanti e creando un collegamento autentico con i passeggeri.</p>
           </div>
           <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
             <i class="bx bx-images"></i>
-            <h4>Aut occaecati</h4>
-            <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+            <h4>Eventi Speciali: </h4>
+            <p>Organizziamo eventi speciali a bordo dei treni, tra cui matrimoni e compleanni, per rendere le occasioni uniche ed indimenticabili.</p>
           </div>
           <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
             <i class="bx bx-shield"></i>
-            <h4>Beatae veritatis</h4>
-            <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+            <h4>Opportunità di Lavoro:</h4>
+            <p>Cerchiamo individui appassionati e competenti per unirsi al nostro team di guide turistiche, contribuendo all'entusiasmante mondo dei tour ferroviari.</p>
           </div>
         </div>
       </div>
@@ -224,83 +243,67 @@
     </div>
   </section><!-- End Features Section -->
 
-
-
   <!-- ======= Services Section ======= -->
   <section id="services" class="services">
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
-        <h2>Services</h2>
-        <p>Check our Services</p>
+        <h2>Servizi</h2>
+        <p>Vedi i nostri servizi</p>
       </div>
 
       <div class="row">
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
           <div class="icon-box">
-            <div class="icon"><i class="bx bxl-dribbble"></i></div>
-            <h4><a href="">Lorem Ipsum</a></h4>
-            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            <div class="icon"><i class="ri-cake-line"></i></div>
+            <h4><a href="">Compleanni e matrimoni</a></h4>
+            <p>Celebra con noi i tuoi eventi in grande stile</p>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
           <div class="icon-box">
-            <div class="icon"><i class="bx bx-file"></i></div>
-            <h4><a href="">Sed ut perspiciatis</a></h4>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+            <div class="icon"><i class="ri-group-line"></i></div>
+            <h4><a href="">Gruppi e Scuole</a></h4>
+            <p>Tour educativi e adatti a qualsiasi età.</p>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
           <div class="icon-box">
-            <div class="icon"><i class="bx bx-tachometer"></i></div>
-            <h4><a href="">Magni Dolores</a></h4>
-            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+            <div class="icon"><i class="ri-truck-line"></i></div>
+            <h4><a href="">Noleggio</a></h4>
+            <p>Noleggia i nostri servizi per un'esperienza personalizzata!</p>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
           <div class="icon-box">
-            <div class="icon"><i class="bx bx-world"></i></div>
-            <h4><a href="">Nemo Enim</a></h4>
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+            <div class="icon"><i class="ri-briefcase-line"></i></div>
+            <h4><a href="">Lavora con noi</a></h4>
+            <p>Pensi di essere la figura adatta per la nostra azienda? Contattaci!</p>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
           <div class="icon-box">
-            <div class="icon"><i class="bx bx-slideshow"></i></div>
-            <h4><a href="">Dele cardo</a></h4>
-            <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+            <div class="icon"><i class="ri-megaphone-line"></i></div>
+            <h4><a href="">Spazi pubblicitari</a></h4>
+            <p>La tua azienda ha bisogno di visibilità?</p>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
           <div class="icon-box">
-            <div class="icon"><i class="bx bx-arch"></i></div>
-            <h4><a href="">Divera don</a></h4>
-            <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+            <div class="icon"><i class="ri-map-pin-line"></i></div>
+            <h4><a href="">Tour personalizzati</a></h4>
+            <p>Offriamo soluzioni su misura per le esigenze aziendali</p>
           </div>
         </div>
-
       </div>
 
     </div>
   </section><!-- End Services Section -->
-
-  <!-- ======= Cta Section ======= -->
- <!-- <section id="cta" class="cta">
-    <div class="container" data-aos="zoom-in">
-
-      <div class="text-center">
-        <h3>Esplora il tour di Taranto</h3>
-        <a class="cta-btn" href="selectLanguage.html">Esplora il tour di taranto</a>
-      </div>
-
-    </div>
-  </section>--><!-- End Cta Section -->
-
 
 
   </div>
@@ -313,67 +316,14 @@
       </div>
 
 
-      <!--carosello-->
 
-      <div class="container">
-        <h2>Foto galleria</h2>
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-          </ol>
-
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="item active">
-              <img src="indexStuff/assets/img/portfolio/IMG_6189.jpg" alt="Los Angeles" style="width:100%;">
-            </div>
-
-            <div class="item">
-              <img src="indexStuff/assets/img/portfolio/1.JPG" alt="Chicago" style="width:100%;">
-            </div>
-
-            <div class="item">
-              <img src="indexStuff/assets/img/portfolio/IMG_0427.jpg" alt="New york" style="width:100%;">
-            </div>
-
-            <div class="item">
-              <img src="indexStuff/assets/img/portfolio/IMG_4740.jpg" alt="New york" style="width:100%;">
-            </div>
-
-            <div class="item">
-              <img src="indexStuff/assets/img/portfolio/File_004.png" alt="New york" style="width:100%;">
-            </div>
-
-            <div class="item">
-              <img src="indexStuff/assets/img/portfolio/IMG_6100.jpg" alt="New york" style="width:100%;">
-            </div>
-          </div>
-
-          <!-- Left and right controls -->
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      </div>
-
-      <!--fine carosello-->
-
-
-     <!-- <div class="row" data-aos="fade-up" data-aos-delay="100">
+      <div class="row" data-aos="fade-up" data-aos-delay="100">
         <div class="col-lg-12 d-flex justify-content-center">
           <ul id="portfolio-flters">
             <li data-filter="*" class="filter-active">Tutte</li>
-            <li data-filter=".filter-app">STS Funtrain</li>
-            <li data-filter=".filter-card">Dotto Trains</li>
-            <li data-filter=".filter-web">Artigianferro</li>
+            <li data-filter=".filter-sts">STS Funtrain</li>
+            <li data-filter=".filter-dotto">Dotto Trains</li>
+            <li data-filter=".filter-artigiano">Artigianferro</li>
           </ul>
         </div>
       </div>
@@ -381,8 +331,7 @@
       <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
 
-
-        <div class="col-lg-3 col-md-3 col-sm-6 portfolio-item filter-card">
+        <div class="col-lg-3 col-md-3 col-sm-6 portfolio-item filter-sts">
           <div class="portfolio-wrap">
             <img src="indexStuff/assets/img/portfolio/IMG_6189.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
@@ -394,7 +343,7 @@
 
 
 
-        <div class="col-lg-3 col-md-3 col-sm-6 portfolio-item filter-app">
+        <div class="col-lg-3 col-md-3 col-sm-6 portfolio-item filter-dotto">
           <div class="portfolio-wrap">
             <img src="indexStuff/assets/img/portfolio/1.JPG" class="img-fluid" alt="">
             <div class="portfolio-info">
@@ -404,7 +353,7 @@
           </div>
         </div>
 
-        <div class="col-lg-3 col-md-3 col-sm-6 portfolio-item filter-app">
+        <div class="col-lg-3 col-md-3 col-sm-6 portfolio-item filter-dotto">
           <div class="portfolio-wrap">
             <img src="indexStuff/assets/img/portfolio/IMG_0427.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
@@ -414,7 +363,7 @@
           </div>
         </div>
 
-        <div class="col-lg-3 col-md-3 col-sm-6 portfolio-item filter-card">
+        <div class="col-lg-3 col-md-3 col-sm-6 portfolio-item filter-artigiano">
           <div class="portfolio-wrap">
             <img src="indexStuff/assets/img/portfolio/IMG_4740.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
@@ -424,7 +373,7 @@
           </div>
         </div>
 
-        <div class="col-lg-3 col-md-3 col-sm-6 portfolio-item filter-web">
+        <div class="col-lg-3 col-md-3 col-sm-6 portfolio-item filter-dotto">
           <div class="portfolio-wrap">
             <img src="indexStuff/assets/img/portfolio/IMG_4938.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
@@ -435,7 +384,7 @@
         </div>
 
 
-        <div class="col-lg-3 col-md-3 col-sm-6 portfolio-item filter-card">
+        <div class="col-lg-3 col-md-3 col-sm-6 portfolio-item filter-artigiano">
           <div class="portfolio-wrap">
             <img src="indexStuff/assets/img/portfolio/IMG_6100.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
@@ -444,7 +393,7 @@
             </div>
           </div>
         </div>
--->
+
 
       </div>
 
@@ -511,7 +460,7 @@
 
       <div class="section-title">
         <h2>Team di Magnifico Train</h2>
-        <p>Chi siamo</p>
+        <!--<p></p>-->
       </div>
 
       <div class="container">
@@ -519,7 +468,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="100">
               <div class="member-img">
-                <img src="indexStuff/assets/img/loris.jpeg" class="img-fluid" alt="">
+                <img src="indexStuff/assets/img/foto-natascia.jpeg" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -528,7 +477,7 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4></h4>
+                <h4>Natascia</h4>
                 <span>Titolare</span>
               </div>
             </div>
@@ -546,7 +495,7 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Loris Monti Condesnit</h4>
+                <h4>Loris</h4>
                 <span>Responsabile</span>
               </div>
             </div>
@@ -562,12 +511,12 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
-        <h2>Contact</h2>
-        <p>Contact Us</p>
+        <h2>Contatti</h2>
+        <p>Contattaci</p>
       </div>
 
       <div>
-        <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30323.17931880245!2d16.131681731501967!3d41.37797868115125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1338202f16180e39%3A0xccd1aa0b55ab1fe!2s76016%20Margherita%20di%20Savoia%20Province%20of%20Barletta-Andria-Trani%2C%20Italy!5e0!3m2!1sen!2sus!4v1698368019298!5m2!1sen!2sus" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11975.698679237648!2d16.140390673902214!3d41.37572134253592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1338202f16180e39%3A0xccd1aa0b55ab1fe!2s76016%20Margherita%20di%20Savoia%20BT!5e0!3m2!1sit!2sit!4v1699207215915!5m2!1sit!2sit" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
       <div class="row mt-5">
@@ -576,20 +525,20 @@
           <div class="info">
             <div class="address">
               <i class="bi bi-geo-alt"></i>
-              <h4>Location:</h4>
-              <p>A108 Adam Street, New York, NY 535022</p>
+              <h4>Locazione:</h4>
+              <p>Margherita Di Savoia (BT)</p>
             </div>
 
             <div class="email">
               <i class="bi bi-envelope"></i>
               <h4>Email:</h4>
-              <p>info@example.com</p>
+              <p>casartelli.lunapark@hotmail.com</p>
             </div>
 
             <div class="phone">
               <i class="bi bi-phone"></i>
-              <h4>Call:</h4>
-              <p>+1 5589 55488 55s</p>
+              <h4>Telefono:</h4>
+              <p>+39 388 071 9622</p>
             </div>
 
           </div>
@@ -618,7 +567,7 @@
               <div class="error-message"></div>
               <div class="sent-message">Your message has been sent. Thank you!</div>
             </div>
-            <div class="text-center"><button type="submit">Send Message</button></div>
+            <div class="text-center"><button type="submit">Invia Messaggio</button></div>
           </form>
 
         </div>
@@ -639,15 +588,12 @@
         <div class="col-lg-6 col-md-6">
           <div class="footer-info">
             <h3>Magnifico<span> Train</span></h3>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> casartelli.lunapark @hotmail.com<br>
+            <strong>Telefono:</strong> +39 388 071 9622<br>
+            <strong>Email:</strong> casartelli.lunapark@hotmail.com<br>
             </p>
             <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="https://www.facebook.com/magnificotrenino/?paipv=0&eav=AfbJ2JE8aQLQXhedSgfi7g4oxji1wm8mzHcEcF3dVMr4DGYUcllsiytD3LDERMqjsKY&_rdr" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.instagram.com/magnifico_train?igshid=OGQ5ZDc2ODk2ZA%3D%3D" class="instagram"><i class="bx bxl-instagram"></i></a>
             </div>
           </div>
         </div>
@@ -666,11 +612,11 @@
         <div class="col-lg-3 col-md-6 footer-links">
           <h4>I nostri servizi</h4>
           <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Servizio 1</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Servizio 2</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Servizio 3</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Servizio 4</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Servizio 5</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Compleanni e matrimoni</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Gruppi e scuole</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Noleggio</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Lavora con noi</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Spazi pubblicitari</a></li>
           </ul>
         </div>
 
@@ -681,24 +627,24 @@
             <input type="email" name="email"><input type="submit" value="Subscribe">
           </form>-->
 
-        </div>
-
       </div>
+
     </div>
   </div>
-  <a href="https://api.whatsapp.com/send?phone=+393880719622&text=Ciao!" class="whatsapp-button">
+  </div>
+  <a href="https://api.whatsapp.com/send?phone=+393880719622&text=Ciao, posso ricevere amggiori informazioni sui servizi offerti?" class="whatsapp-button">
     <i class="ri-whatsapp-line"></i>Contattaci
   </a>
   <div class="container">
     <div class="copyright">
-      &copy; Copyright <strong><span>Magnifico Train</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>Magnifico Train</span></strong>. Tutti i diritti riservati.
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->
       <!-- You can delete the links only if you purchased the pro version. -->
       <!-- Licensing information: https://bootstrapmade.com/license/ -->
       <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ -->
-      Designed by <a href="#">Sebastian Tanase</a>
+      Designed by <a href="https://www.linkedin.com/in/tanasesebastian/">Sebastian Tanase</a>
     </div>
   </div>
 </footer><!-- End Footer -->
