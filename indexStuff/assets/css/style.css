@@ -1776,3 +1776,10 @@ section {
   object-fit: cover; /* Mantiene le proporzioni dell'immagine e la adatta all'area del carosello */
 }
 
+
+/* Aggiungi questa regola per mostrare due foto per riga su smartphone */
+@media (max-width: 580px) {
+  .portfolio-item {
+    flex-basis: 48%;
+    max-width: 48%;
+  }
