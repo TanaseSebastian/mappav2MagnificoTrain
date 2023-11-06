@@ -311,15 +311,110 @@
 
 
   </div>
-  <!-- ======= Portfolio Section ======= -->
+
+
+<!--
+  &lt;!&ndash; Pulsanti di filtro &ndash;&gt;
+  <div id="filter-buttons" class="text-center mt-3">
+    <button class="btn btn-primary active" data-filter="*">Tutte</button>
+    <button class="btn btn-primary" data-filter="filter-sts">STS Funtrain</button>
+    <button class="btn btn-primary" data-filter="filter-dotto">Dotto Trains</button>
+    <button class="btn btn-primary" data-filter="filter-artigiano">Artigianferro</button>
+  </div>
+
+  &lt;!&ndash; Carosello con immagini filtrabili &ndash;&gt;
+  <div id="portfolioCarousel" class="carousel slide mt-5" data-bs-interval="false">
+    <div class="carousel-inner">
+      &lt;!&ndash; Immagini del carosello con attributi data-filter per i filtri &ndash;&gt;
+      <div class="carousel-item active filter-sts">
+        <img src="indexStuff/assets/img/portfolio/IMG_6189.jpg" class="d-block w-100" alt="">
+      </div>
+      <div class="carousel-item filter-dotto">
+        <img src="indexStuff/assets/img/portfolio/1.JPG" class="d-block w-100" alt="">
+      </div>
+      <div class="carousel-item filter-artigiano">
+        <img src="indexStuff/assets/img/portfolio/IMG_4938.jpg" class="d-block w-100" alt="">
+      </div>
+      <div class="carousel-item filter-dotto">
+        <img src="indexStuff/assets/img/portfolio/IMG_6100.jpg" class="d-block w-100" alt="">
+      </div>
+      <div class="carousel-item filter-sts">
+        <img src="indexStuff/assets/img/portfolio/File_004.png" class="d-block w-100" alt="">
+      </div>
+      <div class="carousel-item filter-artigiano">
+        <img src="indexStuff/assets/img/portfolio/IMG_4740.jpg" class="d-block w-100" alt="">
+      </div>
+      &lt;!&ndash; Aggiungi più elementi del carosello qui con attributi data-filter appropriati &ndash;&gt;
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  &lt;!&ndash; Aggiungi Bootstrap JavaScript (prima di chiudere il tag body) &ndash;&gt;
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var filterButtons = document.querySelectorAll('#filter-buttons button');
+      var items = document.querySelectorAll('.carousel-item');
+
+      function toggleClass(elements, className, show) {
+        elements.forEach(function (element) {
+          if (show) {
+            element.classList.remove(className);
+          } else {
+            element.classList.add(className);
+          }
+        });
+      }
+
+      var carousel = new bootstrap.Carousel(document.getElementById('portfolioCarousel'), {
+        interval: false
+      });
+
+      filterButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          var filterValue = button.getAttribute('data-filter');
+
+          items.forEach(function (item) {
+            var itemFilter = item.classList;
+
+            if (filterValue === '*' || itemFilter.contains(filterValue)) {
+              toggleClass([item], 'd-none', true);
+            } else {
+              toggleClass([item], 'd-none', false);
+            }
+          });
+
+          // Rimuovi la classe 'active' da tutti i pulsanti e aggiungila solo al pulsante cliccato
+          filterButtons.forEach(function (btn) {
+            btn.classList.remove('active');
+          });
+          button.classList.add('active');
+
+          // Trova il prossimo elemento con la classe filtro corrispondente e imposta la classe 'active' su di esso
+          var nextItem = carousel._getNext();
+          while (nextItem && !nextItem.classList.contains(filterValue.replace('.', ''))) {
+            nextItem = carousel._getNext();
+          }
+          if (nextItem) {
+            carousel.to(nextItem);
+          }
+        });
+      });
+    });
+  </script>-->
+
+  <!--======= Portfolio Section =======-->
   <section id="portfolio" class="portfolio">
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
         <h2>Galleria</h2>
       </div>
-
-
 
       <div class="row" data-aos="fade-up" data-aos-delay="100">
         <div class="col-lg-12 d-flex justify-content-center">
@@ -334,75 +429,72 @@
 
       <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-
-        <div class="col-lg-3 col-md-3 col-sm-6 portfolio-item filter-sts">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-12 portfolio-item filter-sts">
+          <!-- Prima immagine -->
           <div class="portfolio-wrap">
             <img src="indexStuff/assets/img/portfolio/IMG_6189.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Card 3</h4>
-              <p>Card</p>
+              <h4>Trenino STS Funtrain</h4>
             </div>
           </div>
         </div>
 
-
-
-        <div class="col-lg-3 col-md-3 col-sm-6 portfolio-item filter-dotto">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-12 portfolio-item filter-dotto">
+          <!-- Seconda immagine -->
           <div class="portfolio-wrap">
             <img src="indexStuff/assets/img/portfolio/1.JPG" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
+              <h4>Trenino Dotto Trains</h4>
             </div>
           </div>
         </div>
 
-        <div class="col-lg-3 col-md-3 col-sm-6 portfolio-item filter-dotto">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-12 portfolio-item filter-dotto">
+          <!-- Terza immagine -->
           <div class="portfolio-wrap">
             <img src="indexStuff/assets/img/portfolio/IMG_0427.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
+              <h4>Trenino Dotto Trains</h4>
             </div>
           </div>
         </div>
 
-        <div class="col-lg-3 col-md-3 col-sm-6 portfolio-item filter-artigiano">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-12 portfolio-item filter-artigiano">
+          <!-- Quarta immagine -->
           <div class="portfolio-wrap">
             <img src="indexStuff/assets/img/portfolio/IMG_4740.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
+              <h4>Trenino Artigianferro</h4>
             </div>
           </div>
         </div>
 
-        <div class="col-lg-3 col-md-3 col-sm-6 portfolio-item filter-dotto">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-12 portfolio-item filter-dotto">
+          <!-- Quinta immagine -->
           <div class="portfolio-wrap">
             <img src="indexStuff/assets/img/portfolio/IMG_4938.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
+              <h4>Trenino Dotto Trains</h4>
             </div>
           </div>
         </div>
 
-
-        <div class="col-lg-3 col-md-3 col-sm-6 portfolio-item filter-artigiano">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-12 portfolio-item filter-artigiano">
+          <!-- Sesta immagine -->
           <div class="portfolio-wrap">
             <img src="indexStuff/assets/img/portfolio/IMG_6100.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
+              <h4>Trenino Artigianferro</h4>
             </div>
           </div>
         </div>
 
+        <!-- Aggiungi più colonne con immagini e filtri appropriati qui -->
 
       </div>
 
     </div>
-  </section><!-- End Portfolio Section -->
+  </section> <!--End Portfolio Section-->
 
   <!-- ======= Counts Section ======= -->
   <section id="counts" class="counts">
