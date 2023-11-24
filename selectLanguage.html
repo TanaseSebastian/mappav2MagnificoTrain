@@ -11,11 +11,7 @@
   <link rel="canonical" href="https://www.magnificotrain.it/">
   <style>
 
-    html{
-      background-image: url('img/sfondo.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
+
 
     .container {
       max-width: 800px;
@@ -25,7 +21,7 @@
 
     h1 {
       text-align: center;
-      color: white;
+      color: black;
     }
 
     .flags {
@@ -45,34 +41,59 @@
       text-align: center;
     }
 
-    img{
-      height: 120px;
-      width: 200px;
-      margin:10px;
+    .flags div {
+      display: inline-block;
+      margin: 10px;
+      width: 145px; /* Imposta la larghezza desiderata */
+      height: 145px; /* Imposta l'altezza desiderata */
+      border-radius: 50%; /* Stile circolare */
+      overflow: hidden;
+    }
+
+    .flags img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Garantisce che l'immagine copra completamente il contenitore */
+      border-radius: 50%; /* Garantisce che l'immagine sia rotonda */
     }
   </style>
 </head>
 <body>
 <div class="container">
-  <h1>Seleziona la tua lingua</h1>
+  <h1>SELECT LANGUAGE</h1>
   <div class="flags">
     <div onclick="location.href='taranto-italiano.html'">
       <img id="italia-img" src="img/italia.png" alt="Italiano">
     </div>
+    <h3>Italiano</h3>
+  </div>
+
+  <div class="flags">
     <div onclick="location.href='taranto-inglese.html'">
-      <img  id="inglese-img" src="img/inglese.png"  alt="English">
+      <img id="inglese-img" src="img/inglese.png" alt="English">
     </div>
+    <h3>English</h3>
+  </div>
+
+  <div class="flags">
     <div onclick="location.href='taranto-tedesco.html'">
-      <img id="tedesco-img" src="img/tedesco.jpeg"  alt="Deutsch">
+      <img id="tedesco-img" src="img/tedesco.jpeg" alt="Deutsch">
     </div>
+    <h3>Deutsch</h3>
+  </div>
+
+  <div class="flags">
     <div onclick="location.href='taranto-francese.html'">
-      <img id="france-img" src="img/france.png"  alt="Français">
+      <img id="france-img" src="img/france.png" alt="Français">
     </div>
+    <h3>Français</h3>
+  </div>
+
+  <div class="flags">
     <div onclick="location.href='taranto-spagnolo.html'">
-     <img id="spagnolo-img" src="img/spagnolo.jpeg"  alt="Español">
+      <img id="spagnolo-img" src="img/spagnolo.jpeg" alt="Español">
     </div>
-
-
+    <h3>Español</h3>
   </div>
 </div>
 
