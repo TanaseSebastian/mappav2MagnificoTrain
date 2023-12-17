@@ -647,12 +647,16 @@ section {
   padding-top: 20px;
 }
 
+.clients-slider{
+  padding-left: 70px;
+}
+
 .clients .swiper-slide img {
   opacity: 0.5;
   transition: 0.3s;
   filter: grayscale(100);
-  width: 110px;
-  height: 150px;
+  width: 100px;
+  height: 130px;
 }
 
 .clients .swiper-slide img:hover {
@@ -661,7 +665,7 @@ section {
 }
 
 .clients .swiper-pagination {
-  margin-top: 20px;
+  margin-top: 100px;
   position: relative;
 }
 
