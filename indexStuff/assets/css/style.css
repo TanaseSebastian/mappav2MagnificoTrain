@@ -126,6 +126,28 @@ h6 {
   /*background: rgba(0, 0, 0, 1); !* Sfondo predefinito con opacità 0.8 *!*/
 }
 
+#logo-desktop{
+  max-width: 80px;
+  width: 10vw;
+  margin: 30px;
+}
+#logo-mobile{
+  max-width: 80px;
+  width: 10vw;
+}
+
+/* Altezza del padding per schermi grandi (tablets e desktop) */
+@media (min-width: 1200px) {
+  #header {
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 0;
+  }
+  #team-link{
+    padding: 10px 0;
+  }
+}
+
 .header-top-black{
   background: rgba(0, 0, 0, 0.8); /* Sfondo predefinito con opacità 1 */
 }
