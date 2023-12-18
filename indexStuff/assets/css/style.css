@@ -1809,22 +1809,11 @@ section {
 
 
 
-/* carosello*/
-.carousel {
-  max-width: 1000px; /* Imposta la larghezza massima del carosello */
-  margin: 0 auto; /* Centra il carosello nella pagina */
-}
-
-.carousel-item img {
-  width: 100%; /* Riempie completamente l'area del carosello con l'immagine */
-  height: 500px; /* Imposta l'altezza desiderata delle immagini */
-  object-fit: cover; /* Mantiene le proporzioni dell'immagine e la adatta all'area del carosello */
-}
-
-
 /* Aggiungi questa regola per mostrare due foto per riga su smartphone */
 @media (max-width: 580px) {
   .portfolio-item {
     flex-basis: 48%;
     max-width: 48%;
   }
+
+
