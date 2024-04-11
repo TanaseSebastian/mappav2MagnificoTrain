@@ -669,8 +669,8 @@ section {
   padding-top: 20px;
 }
 
-.clients-slider{
-  padding-left: 70px;
+.clients .swiper {
+  width: 100%; /* This width ensures the swiper uses all available space */
 }
 
 .clients .swiper-slide img {
