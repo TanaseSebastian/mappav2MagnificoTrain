@@ -609,6 +609,16 @@ section {
   background: #ffde9e;
   margin: 4px 10px;
 }
+@media only screen and (max-width: 600px) {
+.section-title .long::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: #ffde9e;
+  margin: 10px 10px;
+ }
+}
 
 @media only screen and (max-width: 600px) {
   .section-title h2::after {
