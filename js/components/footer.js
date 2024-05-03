@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 </div>
             </div>
         </div>
-        <a href="https://api.whatsapp.com/send?phone=+393880719622&text=Ciao, posso ricevere amggiori informazioni sui servizi offerti?" class="whatsapp-button">
+        <a href="https://api.whatsapp.com/send?phone=+393880719622&text=Ciao, posso ricevere maggiori informazioni sui servizi offerti?" class="whatsapp-button">
             <i class="ri-whatsapp-line"></i>Contattaci
         </a>
         <div class="container">
