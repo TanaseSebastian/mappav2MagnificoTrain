@@ -837,6 +837,13 @@ section {
   margin:5%;
 }
 
+#ctaAlbatros {
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/sezioni/albatros.png") center center;
+  background-size: cover;
+  padding: 120px 0;
+  margin:5%;
+}
+
 .cta h3 {
   color: #fff;
   font-size: 28px;
