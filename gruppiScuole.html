@@ -32,84 +32,8 @@
 
 <body>
 
-
-<!-- ======= Header ======= -->
-<header id="header" class="fixed-top header-top-black">
-  <div id="container-responsive-align" class="container d-flex align-items-center">
-
-    <!--
-          <h1 class="logo me-auto me-lg-0"><a href="index.html"><img src="STATIC/assets/img/shortLogo-removebg-preview.png"><span>MI</span> Fitness World</a></h1>
-    -->
-
-    <img id="logo-mobile" class="mi_logo" src="STATIC/assets/img/logo-circle.png">
-
-    <!--
-          <h1 class="logo me-auto me-lg-0"><a href="index.html"><img src="STATIC/assets/img/shortLogo-removebg-preview.png" style="width: 100%"></a></h1>
-    -->
-
-    <!-- Uncomment below if you prefer to use an image logo -->
-    <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="STATIC/assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-    <nav id="navbar" class="navbar order-last order-lg-0">
-      <ul>
-        <li><a class="nav-link" href="index.html">Home</a></li>
-        <li><a class="nav-link" href="#about">Chi siamo</a></li>
-        <li><a class="nav-link" href="#services">Servizi</a></li>
-        <!--<li><a class="nav-link scrollto " href="#portfolio">Galleria</a></li>-->
-        <img id="logo-desktop" class="mi_logo" src="STATIC/assets/img/logo-circle.png">
-        <li><a id="team-link" class="nav-link" href="#team">Team</a></li>
-        <li class="dropdown"><a class="nav-link active" href="#"><span>Servizi Offerti</span> <i class="bi bi-chevron-down"></i></a>
-          <ul>
-            <li><a href="compleanni.html">Compleanni e Matrimoni</a></li>
-            <li class="li-active-link"><a href="gruppiScuole.html">Gruppi e Scuole</a></li>
-            <li><a href="noleggio.html">Noleggio</a></li>
-            <li><a href="lavoraConNoi.html">Lavora con Noi</a></li>
-            <li><a href="pubblicita.html">Spazi Pubblicitari</a></li>
-          </ul>
-        </li>
-        <li><a class="nav-link" href="#contact">Contatti</a></li>
-      </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav><!-- .navbar -->
-
-    <!-- <a href="#about" class="get-started-btn scrollto">Get Started</a>-->
-
-  </div>
-</header><!-- End Header -->
-
-<script>
-  // Ottieni riferimenti agli elementi da nascondere/mostrare
-  const container = document.getElementById('container-responsive-align');
-  const logoDesktop = document.getElementById('logo-desktop');
-  const logoMobile = document.getElementById('logo-mobile');
-
-  // Funzione per controllare la larghezza della finestra e nascondere/mostrare gli elementi di conseguenza
-  function checkWindowSize() {
-    const windowWidth = window.innerWidth;
-
-    // Rimuovi tutte le classi di allineamento e reimposta la visibilità dei loghi
-    container.classList.remove('justify-content-center', 'justify-content-lg-between');
-    logoDesktop.style.display = 'block';
-    logoMobile.style.display = 'block';
-
-    // Controlla se la larghezza della finestra è inferiore o uguale a 768px (tablet medio o mobile)
-    if (windowWidth <= 1306) {
-      // Sei su mobile
-      container.classList.add('justify-content-lg-between');
-      logoDesktop.style.display = 'none';
-    } else {
-      // Sei su desktop
-      container.classList.add('justify-content-center');
-      logoMobile.style.display = 'none';
-    }
-  }
-
-  // Chiama la funzione quando la finestra è completamente caricata
-  window.onload = checkWindowSize;
-
-  // Chiama la funzione quando la finestra viene ridimensionata
-  window.addEventListener('resize', checkWindowSize);
-</script>
+<!--aggiungo header-->
+<script src="js/components/header.js"></script>
 
 <main id="main" style="margin-top: 10%">
 
