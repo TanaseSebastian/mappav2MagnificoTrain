@@ -818,26 +818,26 @@ section {
 # Cta
 --------------------------------------------------------------*/
 #ctaBisceglieLitoranea {
-  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bisceglie/bisceglie_litoranea_cta.webp") fixed center center;
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bisceglie/bisceglie-litoranea-cta.jpg") fixed center center;
   background-size: cover;
   padding: 120px 0;
   margin: 5%;
 }
 #ctaBisceglieCulturale {
-  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bisceglie/bisceglie_culturale_cta.webp") fixed center center;
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bisceglie/bisceglie-culturale-cta.jpg") fixed center center;
   background-size: cover;
   padding: 120px 0;
   margin: 5%;
 }
 #ctaBisceglieSerale {
-  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bisceglie/bisceglie-serale-cta.webp") fixed center center;
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bisceglie/bisceglie-serale-cta.jpg") fixed center center;
   background-size: cover;
   padding: 120px 0;
   margin: 5%;
 }
 
 #ctaTaranto {
-  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/sezioni/tarantoImage.jpeg") fixed center center;
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/sezioni/tarantoImage.jpg") fixed center center;
   background-size: cover;
   padding: 120px 0;
   margin: 5%;
