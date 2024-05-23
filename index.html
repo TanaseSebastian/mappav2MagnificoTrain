@@ -571,27 +571,15 @@
 </main><!-- End #main -->
 <!--aggiungo il footer-->
 <script src="js/components/footer.js"></script>
+<a href="https://api.whatsapp.com/send?phone=+393880719622&text=Ciao, posso ricevere maggiori informazioni sui servizi offerti?" class="whatsapp-button">
+  <i class="ri-whatsapp-line"></i>Contattaci
+</a>
 
 
 <div id="preloader"></div>
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 
-<script>
-  const video = document.getElementById('video-bg');
-  function playVideo() {
-    video.play();
-    removeEventListeners();
-  }
-
-  function removeEventListeners() {
-    document.removeEventListener('click', playVideo);
-    document.removeEventListener('touchstart', playVideo);
-  }
-
-  document.addEventListener('click', playVideo);
-  document.addEventListener('touchstart', playVideo);
-</script>
 <!-- Vendor JS Files -->
 <script src="STATIC/assets/vendor/purecounter/purecounter_vanilla.js"></script>
 <script src="STATIC/assets/vendor/aos/aos.js"></script>

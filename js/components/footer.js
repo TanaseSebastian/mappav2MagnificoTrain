@@ -49,9 +49,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 </div>
             </div>
         </div>
-        <a href="https://api.whatsapp.com/send?phone=+393880719622&text=Ciao, posso ricevere maggiori informazioni sui servizi offerti?" class="whatsapp-button">
-            <i class="ri-whatsapp-line"></i>Contattaci
-        </a>
         <div class="container">
             <div class="copyright">
                 &copy; Copyright <strong><span>Magnifico Train</span></strong>. Tutti i diritti riservati.

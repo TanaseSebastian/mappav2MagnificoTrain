@@ -1859,16 +1859,33 @@ section {
     flex-basis: 48%;
     max-width: 48%;
 
+  }
 
-  /*CUSTOM STYLE*/
+  /*CUSTOM STYLE BISCEGLIE*/
 .headline{
   font-weight: 700;
   font-size: 28px;
   font-family: "Poppins", sans-serif;
 }
-
-
-}
+  .map-container {
+    text-align: center; /* Assicura che il contenitore centri l'immagine */
   }
+  .map-container img {
+    width: 100%; /* Assicura che l'immagine sia responsive */
+    max-width: 100%; /* Evita che l'immagine superi la larghezza del contenitore */
+    height: auto; /* Mantiene il rapporto di aspetto */
+    display: inline-block; /* Assicura che l'immagine sia trattata come elemento inline per centrarla */
+    margin: 0 auto; /* Centra l'immagine orizzontalmente */
+  }
+  @media (min-width: 992px) {
+    .map-container img {
+      max-height: 500px; /* Limita l'altezza a 500px su schermi grandi */
+      width: auto; /* Impedisce alla larghezza di estendersi oltre il contenitore */
+    }
+  }
+  .card {
+    box-shadow: 0 2px 5px rgba(0,0,0,.1);
+  }
+}
 
 

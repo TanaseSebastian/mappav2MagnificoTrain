@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Magnifico Train Bisceglie</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Favicons -->
+  <link href="STATIC/assets/img/favicon.ico" rel="icon">
+  <link href="STATIC/assets/img/favicon.ico" rel="apple-touch-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="STATIC/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="STATIC/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="STATIC/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="STATIC/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="STATIC/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="STATIC/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="STATIC/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="STATIC/assets/css/style.css" rel="stylesheet">
+  <style>
+    /* CSS per il badge del Comune */
+    .common-width {
+      max-width: 800px; /* Imposta la larghezza massima */
+      width: 100%; /* Assicura che l'immagine sia responsive */
+    }
+    .badge-img {
+      max-height: 150px; /* Imposta l'altezza massima */
+      object-fit: contain; /* Mantiene le proporzioni dell'immagine */
+    }
+    /* Margine superiore dinamico per mapSection */
+    #mapSection {
+      margin-top: 20px; /* Valore di base */
+    }
+    /* Media query per schermi piccoli (telefono) */
+    @media (max-width: 576px) {
+      #mapSection {
+        margin-top: 50px;
+      }
+    }
+    /* Media query per schermi medi (tablet) */
+    @media (min-width: 577px) and (max-width: 768px) {
+      #mapSection {
+        margin-top: 70px;
+      }
+    }
+    /* Media query per schermi grandi (desktop) */
+    @media (min-width: 769px) {
+      #mapSection {
+        margin-top: 90px;
+      }
+    }
+    /* CSS per rendere la mappa zoomabile su mobile */
+    .zoomable-container {
+      overflow: hidden;
+    }
+    .zoomable-image {
+      transition: transform 0.2s ease-in-out;
+      cursor: zoom-in;
+    }
+    .zoomable-image:active {
+      transform: scale(2);
+      cursor: zoom-out;
+    }
+    .headline{
+      font-weight: 700;
+      font-size: 28px;
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
+</head>
+<body>
+<!-- Header -->
+<script src="js/components/header.js"></script>
+
+<!-- Sezione Mappa -->
+<section id="mapSection">
+  <div class="container">
+    <h3 class="headline" style="text-align: center; color: #151515;">Servizio litoranea</h3>
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center">
+        <img src="STATIC/assets/img/bisceglie/comune_bisceglie_badge.png" alt="Logo del Comune di Bisceglie" class="img-fluid common-width badge-img">
+      </div>
+      <div class="col-12 d-flex justify-content-center">
+        <div class="zoomable-container">
+          <img src="STATIC/assets/img/bisceglie/mappa_servizio_litoranea.jpg" alt="Mappa di Bisceglie" class="img-fluid common-width zoomable-image">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sezione Fermate -->
+<section id="stopsSection">
+  <div class="container">
+    <h3 class="headline text-center mb-4" style="text-align: center; color: #151515;">Fermate e Orari</h3>
+    <div class="row">
+
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100">
+          <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Capolinea">
+          <div class="card-body">
+            <h5 class="card-title">Capolinea</h5>
+            <p class="card-text">Orari di partenza: 07:00, 08:00, 09:00, 10:00</p>
+            <p class="card-text">Il punto di partenza principale per tutte le linee di autobus della città.</p>
+            <a href="https://maps.google.com/?q=41.240747,16.502596" class="btn btn-primary" target="_blank">Vedi su Google Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card h-100">
+          <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Piazza Vittorio Emanuele II">
+          <div class="card-body">
+            <h5 class="card-title">Piazza Vittorio Emanuele II</h5>
+            <p class="card-text">Orari di partenza: 07:15, 08:15, 09:15, 10:15</p>
+            <p class="card-text">Una piazza storica nel cuore di Bisceglie, ideale per una passeggiata.</p>
+            <a href="https://maps.google.com/?q=41.239996,16.501186" class="btn btn-primary" target="_blank">Vedi su Google Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="card h-100">
+          <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Torrione Schinosa">
+          <div class="card-body">
+            <h5 class="card-title">Torrione Schinosa</h5>
+            <p class="card-text">Orari di partenza: 07:30, 08:30, 09:30, 10:30</p>
+            <p class="card-text">Un antico torrione che offre una vista panoramica della città.</p>
+            <a href="https://maps.google.com/?q=41.241775,16.501577" class="btn btn-primary" target="_blank">Vedi su Google Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="card h-100">
+          <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Parrocchia San Domenico">
+          <div class="card-body">
+            <h5 class="card-title">Parrocchia San Domenico</h5>
+            <p class="card-text">Orari di partenza: 07:45, 08:45, 09:45, 10:45</p>
+            <p class="card-text">Una storica parrocchia nel centro della città, nota per la sua architettura.</p>
+            <a href="https://maps.google.com/?q=41.242118,16.502418" class="btn btn-primary" target="_blank">Vedi su Google Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+        <div class="card h-100">
+          <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Palazzo di Città">
+          <div class="card-body">
+            <h5 class="card-title">Palazzo di Città</h5>
+            <p class="card-text">Orari di partenza: 08:00, 09:00, 10:00, 11:00</p>
+            <p class="card-text">Il municipio di Bisceglie, un edificio imponente con una lunga storia.</p>
+            <a href="https://maps.google.com/?q=41.242445,16.502729" class="btn btn-primary" target="_blank">Vedi su Google Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="600">
+        <div class="card h-100">
+          <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Monumento ai Marinai d’Italia">
+          <div class="card-body">
+            <h5 class="card-title">Monumento ai Marinai d’Italia</h5>
+            <p class="card-text">Orari di partenza: 08:15, 09:15, 10:15, 11:15</p>
+            <p class="card-text">Un monumento dedicato ai marinai italiani, situato vicino al porto.</p>
+            <a href="https://maps.google.com/?q=41.243538,16.503769" class="btn btn-primary" target="_blank">Vedi su Google Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="700">
+        <div class="card h-100">
+          <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Porto Turistico">
+          <div class="card-body">
+            <h5 class="card-title">Porto Turistico</h5>
+            <p class="card-text">Orari di partenza: 08:30, 09:30, 10:30, 11:30</p>
+            <p class="card-text">Il porto turistico di Bisceglie, ideale per una passeggiata serale e per ammirare le barche.</p>
+            <a href="https://maps.google.com/?q=41.243833,16.505640" class="btn btn-primary" target="_blank">Vedi su Google Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="800">
+        <div class="card h-100">
+          <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Bastione di San Martino">
+          <div class="card-body">
+            <h5 class="card-title">Bastione di San Martino</h5>
+            <p class="card-text">Orari di partenza: 08:45, 09:45, 10:45, 11:45</p>
+            <p class="card-text">Un bastione storico che offre una vista spettacolare sul mare e sulla città.</p>
+            <a href="https://maps.google.com/?q=41.242719,16.506525" class="btn btn-primary" target="_blank">Vedi su Google Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="900">
+        <div class="card h-100">
+          <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Torre Maestra">
+          <div class="card-body">
+            <h5 class="card-title">Torre Maestra</h5>
+            <p class="card-text">Orari di partenza: 09:00, 10:00, 11:00, 12:00</p>
+            <p class="card-text">Una torre storica nel centro della città, simbolo di Bisceglie.</p>
+            <a href="https://maps.google.com/?q=41.240138,16.505086" class="btn btn-primary" target="_blank">Vedi su Google Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="1000">
+        <div class="card h-100">
+          <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Castello Svevo Angioino">
+          <div class="card-body">
+            <h5 class="card-title">Castello Svevo Angioino</h5>
+            <p class="card-text">Orari di partenza: 09:15, 10:15, 11:15, 12:15</p>
+            <p class="card-text">Il castello storico di Bisceglie, con vista panoramica e un ricco passato.</p>
+            <a href="https://maps.google.com/?q=41.240485,16.505344" class="btn btn-primary" target="_blank">Vedi su Google Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="1100">
+        <div class="card h-100">
+          <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Chiesa del Purgatorio">
+          <div class="card-body">
+            <h5 class="card-title">Chiesa del Purgatorio</h5>
+            <p class="card-text">Orari di partenza: 09:30, 10:30, 11:30, 12:30</p>
+            <p class="card-text">Una chiesa storica con una bellissima facciata barocca.</p>
+            <a href="https://maps.google.com/?q=41.240650,16.505612" class="btn btn-primary" target="_blank">Vedi su Google Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="1200">
+        <div class="card h-100">
+          <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Parco delle Beatitudini">
+          <div class="card-body">
+            <h5 class="card-title">Parco delle Beatitudini</h5>
+            <p class="card-text">Orari di partenza: 09:45, 10:45, 11:45, 12:45</p>
+            <p class="card-text">Un'area verde perfetta per rilassarsi e godersi la natura.</p>
+            <a href="https://maps.google.com/?q=41.242017,16.505992" class="btn btn-primary" target="_blank">Vedi su Google Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="1300">
+        <div class="card h-100">
+          <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Palazzo Albrizio">
+          <div class="card-body">
+            <h5 class="card-title">Palazzo Albrizio</h5>
+            <p class="card-text">Orari di partenza: 10:00, 11:00, 12:00, 13:00</p>
+            <p class="card-text">Un palazzo storico con splendidi dettagli architettonici.</p>
+            <a href="https://maps.google.com/?q=41.242659,16.505525" class="btn btn-primary" target="_blank">Vedi su Google Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="1400">
+        <div class="card h-100">
+          <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Palazzo Ammazzalorsa">
+          <div class="card-body">
+            <h5 class="card-title">Palazzo Ammazzalorsa</h5>
+            <p class="card-text">Orari di partenza: 10:15, 11:15, 12:15, 13:15</p>
+            <p class="card-text">Un elegante palazzo che ospita importanti eventi culturali.</p>
+            <a href="https://maps.google.com/?q=41.242905,16.505289" class="btn btn-primary" target="_blank">Vedi su Google Maps</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<main id="main">
+  <!-- Sezione Contatto -->
+  <script src="js/components/contacts.js"></script>
+</main>
+
+<!-- Footer -->
+<script src="js/components/footer.js"></script>
+
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="STATIC/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="STATIC/assets/vendor/aos/aos.js"></script>
+<script src="STATIC/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="STATIC/assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="STATIC/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="STATIC/assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="STATIC/assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="STATIC/assets/js/main.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const preloader = document.getElementById('preloader');
+    const mapSection = document.getElementById('mapSection');
+    if (preloader) {
+      preloader.style.display = 'none';
+    }
+
+    // Aggiungi eventi per il zoom
+    const zoomableImage = document.querySelector('.zoomable-image');
+    if (zoomableImage) {
+      zoomableImage.addEventListener('click', function() {
+        if (zoomableImage.style.transform === 'scale(2)') {
+          zoomableImage.style.transform = 'scale(1)';
+          zoomableImage.style.cursor = 'zoom-in';
+        } else {
+          zoomableImage.style.transform = 'scale(2)';
+          zoomableImage.style.cursor = 'zoom-out';
+        }
+      });
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,21 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="it">
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
   <title>Magnifico Train Bisceglie</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
   <!-- Favicons -->
   <link href="STATIC/assets/img/favicon.ico" rel="icon">
   <link href="STATIC/assets/img/favicon.ico" rel="apple-touch-icon">
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
   <!-- Vendor CSS Files -->
   <link href="STATIC/assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="STATIC/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,72 +19,58 @@
   <link href="STATIC/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="STATIC/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="STATIC/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
   <!-- Template Main CSS File -->
   <link href="STATIC/assets/css/style.css" rel="stylesheet">
+  <style>
+    /* Margine superiore dinamico per mapSection */
+    #iframeSection {
+      margin-top: 20px; /* Valore di base */
+    }
+    /* Media query per schermi piccoli (telefono) */
+    @media (max-width: 576px) {
+      #iframeSection {
+        margin-top: 15px;
+      }
+    }
+    /* Media query per schermi medi (tablet) */
+    @media (min-width: 577px) and (max-width: 768px) {
+      #iframeSection {
+        margin-top: 39px;
+      }
+    }
 
+    /* Media query per schermi grandi (desktop) */
+    @media (min-width: 768px) {
+      #iframeSection {
+        margin-top: 80px;
+      }
+    }
+  </style>
 </head>
-
 <body>
+<!-- Header -->
+<header>
+  <script src="js/components/header.js"></script>
+</header>
 
-<!--aggiungo header-->
-<script src="js/components/header.js"></script>
 
-<!-- ======= Hero Section ======= -->
-<section id="hero" style="background: url('STATIC/assets/img/sezioni/bisceglie.jpg') center center / cover no-repeat;" class="d-flex align-items-center justify-content-center">
-  <div class="overlay"></div>
-  <div class="container" data-aos="fade-up">
-    <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
-      <div class="col-xl-6 col-lg-8">
-        <h1><span>Bisceglie</span></h1>
-        <h2 style="margin-bottom: 10vh;">
-          Scoprite le meraviglie di Bisceglie a bordo del Magnifico Train! Dall'incantevole porto antico alla maestosa Cattedrale di San Pietro, il nostro trenino offre ben tre tour diversi.
-        </h2>
-        <a href="#ctaSections" class="scroll-link" style="display: block; margin-top: 20px;">Scorri in basso per scoprirli!</a>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Hero -->
 
-<!-- ======= Servizi ======= -->
-<section id="ctaSections" class="cta">
-  <div class="container">
-    <h3 class="headline" style="text-align: center; color: #151515;">Servizi di Bisceglie</h3>
-    <div class="row">
-      <!-- Servizio litoranea -->
-      <div class="col-md-4" data-aos="zoom-in">
-        <div class="text-center" id="ctaBisceglieLitoranea">
-          <h3>Servizio Litoranea</h3>
-          <a class="cta-btn" href="#">Esplora il tour</a>
-        </div>
-      </div>
-      <!-- Tour Culturale -->
-      <div class="col-md-4" data-aos="zoom-in">
-        <div class="text-center" id="ctaBisceglieCulturale">
-          <h3>Tour Culturale</h3>
-          <a class="cta-btn" href="#">Esplora il tour</a>
-        </div>
-      </div>
-      <!-- Giro serale -->
-      <div class="col-md-4" data-aos="zoom-in">
-        <div class="text-center" id="ctaBisceglieSerale">
-          <h3>Giro Serale</h3>
-          <a class="cta-btn" href="#">Esplora il tour</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- Iframe per incorporare un'altra pagina web -->
+  <section id="iframeSection">
+    <iframe  src="./bisceglie-italiano.html" style="width: 100%; height: 100vh; border: none; "></iframe>
+  </section>
+
+
+
 
 
 <main id="main">
-<!--aggiungo la sezione contatto-->
+  <!-- Sezione Contatto -->
   <script src="js/components/contacts.js"></script>
-</main><!-- End #main -->
-<!--aggiungo il footer-->
-<script src="js/components/footer.js"></script>
+</main>
 
+<!-- Footer -->
+<script src="js/components/footer.js"></script>
 
 <div id="preloader"></div>
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -106,6 +87,13 @@
 <!-- Template Main JS File -->
 <script src="STATIC/assets/js/main.js"></script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+      preloader.style.display = 'none';
+    }
+  });
+</script>
 </body>
-
 </html>
