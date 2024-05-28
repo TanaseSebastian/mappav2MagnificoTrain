@@ -11,11 +11,22 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/bisceglie/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .timeline__img {
+      width: 300px;
+      max-width: 300px; /* Limita la larghezza massima delle immagini */
+      height: 300px; /* Altezza fissa per tutte le immagini */
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
 <div class="loader-overlay">
   <div class="loader">
-    <img src="STATIC/assets/img/logo-circle.png" alt="Logo" class="loader-logo">
+    <img src="STATIC/assets/img/logo-circle.png" alt="Logo" class="loader-logo" style="max-width: 70px">
   </div>
   <p class="loading-text">Caricamento...</p>
 </div>
@@ -61,7 +72,7 @@
 
     <div class="timeline">
       <div class="timeline-item" data-text="INIZIO TOUR">
-        <div class="timeline__content"><img class="timeline__img"/>
+        <div class="timeline__content">
           <h2 class="timeline__content-title">Benvenuti a bordo del Trenino Turistico di Bisceglie!</h2>
           <br><br>
           <audio class="audio-player" controls controlsList="nodownload nofullscreen">
@@ -73,7 +84,7 @@
         </div>
       </div>
       <div class="timeline-item" data-text="1. Capolinea">
-        <div class="timeline__content"><img class="timeline__img"  />
+        <div class="timeline__content">
           <h2 class="timeline__content-title">1. Capolinea</h2>
           <br><br>
           <p class="timeline__content-desc">Il nostro tour inizia dal capolinea, il punto di partenza principale per il nostro trenino turistico.</p>
@@ -122,21 +133,21 @@
         </div>
       </div>
       <div class="timeline-item" data-text="8. Bastione di San Martino">
-        <div class="timeline__content"><img class="timeline__img" src="STATIC/assets/img/bisceglie/TOUR%20CULTURALE/bastione%20san%20martino.png" />
+        <div class="timeline__content"><img class="timeline__img" src="STATIC/assets/img/bisceglie/TOUR%20CULTURALE/bastione_san_martino.jpg" />
           <h2 class="timeline__content-title">8. Bastione di San Martino</h2>
           <br><br>
           <p class="timeline__content-desc">Un bastione storico che offre una vista spettacolare sul mare e sulla città. Un luogo perfetto per scattare foto.</p>
         </div>
       </div>
       <div class="timeline-item" data-text="9. Bastione di San Gennaro">
-        <div class="timeline__content"><img class="timeline__img" src="STATIC/assets/img/bisceglie/TOUR%20CULTURALE/Screenshot%202024-05-23%20alle%2012.15.11.png" />
+        <div class="timeline__content"><img class="timeline__img" src="STATIC/assets/img/bisceglie/TOUR%20CULTURALE/bastione_san_gennaro.png" />
           <h2 class="timeline__content-title">9. Bastione di San Gennaro</h2>
           <br><br>
           <p class="timeline__content-desc">Un altro dei bastioni che facevano parte delle fortificazioni della città. Un luogo ricco di storia e fascino.</p>
         </div>
       </div>
       <div class="timeline-item" data-text="10. Torre Maestra">
-        <div class="timeline__content"><img class="timeline__img" src="STATIC/assets/img/bisceglie/TOUR%20CULTURALE/torre%20maestra.png" />
+        <div class="timeline__content"><img class="timeline__img" src="STATIC/assets/img/bisceglie/TOUR%20CULTURALE/torre_maestra.jpg" />
           <h2 class="timeline__content-title">10. Torre Maestra</h2>
           <br><br>
           <p class="timeline__content-desc">Una torre storica nel centro della città, simbolo di Bisceglie. Offre una vista panoramica indimenticabile.</p>

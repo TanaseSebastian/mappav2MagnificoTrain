@@ -9,8 +9,9 @@ document.addEventListener("DOMContentLoaded", function() {
                             <h3>Magnifico<span> Train</span></h3>
                             <div class="address">
                                 <i class="bi bi-geo-alt"> SEDI</i>
-                                <h4 class="mt-3">Margherita Di Savoia</h4>
-                                <h4 class="mt-0">Lesina</h4>
+                                <h4 class="mt-3">Bisceglie</h4>
+                                <h4 class="mt-0">Margherita Di Savoia</h4>
+                                <h4 class="mt-0">Marina di Lesina</h4>
                             </div>
                             <div class="email">
                                 <i class="bi bi-envelope"> EMAIL</i>
