@@ -355,10 +355,16 @@ button.navbar-toggler {
   border: 0;
 }
 
+.navbar-toggler a {
+  display: inline-block;
+  height: 100%;
+}
+
 .bandiera {
   width: 10vw;
   border-radius: 50%;
   height: 10vw;
+  display: block;
 }
 
 @media screen and (min-width: 768px) {
