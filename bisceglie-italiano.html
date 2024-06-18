@@ -223,7 +223,7 @@
           <p class="timeline__content-desc">Sappiamo davvero poco sulla chiesetta chiamata “Chiesa del Purgatorio”. Costruita nel 1638 in prossimità del Castello Svevo Angioino, si erge sul Largo che prende il nome dallo stesso Castello.</p>
         </div>
       </div>
-      <div class="timeline-item" data-text="13. Parco delle Beatitudini">
+      <div class="timeline-item" data-text="12. Parco delle Beatitudini">
         <div class="timeline__content"><img class="timeline__img" src="STATIC/assets/img/bisceglie/TOUR%20CULTURALE/parco%20delle%20beatitudini.jpg" />
           <h2 class="timeline__content-title">12. Parco delle Beatitudini</h2>
           <br><br>
@@ -237,7 +237,7 @@
       </div>
       <div class="timeline-item" data-text="13. Palazzo Albrizio">
         <div class="timeline__content"><img class="timeline__img" src="STATIC/assets/img/bisceglie/TOUR%20CULTURALE/Palazzo-Albrizio-Bisceglie.jpeg" />
-          <h2 class="timeline__content-title">14. Palazzo Albrizio</h2>
+          <h2 class="timeline__content-title">13. Palazzo Albrizio</h2>
           <br><br>
           <audio class="audio-player" controls controlsList="nodownload nofullscreen">
             <source src="./AUDIO/ITALIANO/1.%20Introduzione%20(enhanced).wav" type="audio/mpeg">
@@ -249,7 +249,7 @@
       </div>
       <div class="timeline-item" data-text="14. Palazzo Ammazzalorsa">
         <div class="timeline__content"><img class="timeline__img" src="STATIC/assets/img/bisceglie/TOUR%20CULTURALE/palazzo-ammazzalorsa.jpg" />
-          <h2 class="timeline__content-title">15. Palazzo Ammazzalorsa</h2>
+          <h2 class="timeline__content-title">14. Palazzo Ammazzalorsa</h2>
           <br><br>
           <audio class="audio-player" controls controlsList="nodownload nofullscreen">
             <source src="./AUDIO/ITALIANO/1.%20Introduzione%20(enhanced).wav" type="audio/mpeg">
@@ -259,18 +259,18 @@
           <p class="timeline__content-desc">Costruito nel 1700 viene definito un falso storico, in quanto ha l'architettura di una costruzione del 400. Meraviglioso ed imponente, all'interno vi è conservata una collezione privata di dipinti del XX secolo, porcellane e carrozze. Si trova in posizione strategica e dominante, in quanto domina tutto il porto di Bisceglie.</p>
         </div>
       </div>
-      <<div class="timeline-item" data-text="FINE CORSA">
-      <div class="timeline__content">
-        <h2 class="timeline__content-title"> FINE CORSA</h2>
-        <br><br>
-        <audio class="audio-player" controls controlsList="nodownload nofullscreen">
-          <source src="./AUDIO/ITALIANO/1.%20Introduzione%20(enhanced).wav" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-        <br><br>
-        <p class="timeline__content-desc">Siamo giunti al termine del tour della città di Bisceglie! Tutto lo staff vi augura una piacevole permanenza nella nostra fantastica città!</p>
+      <div class="timeline-item" data-text="FINE CORSA">
+        <div class="timeline__content">
+          <h2 class="timeline__content-title"> FINE CORSA</h2>
+          <br><br>
+          <audio class="audio-player" controls controlsList="nodownload nofullscreen">
+            <source src="./AUDIO/ITALIANO/1.%20Introduzione%20(enhanced).wav" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <br><br>
+          <p class="timeline__content-desc">Siamo giunti al termine del tour della città di Bisceglie! Tutto lo staff vi augura una piacevole permanenza nella nostra fantastica città!</p>
+        </div>
       </div>
-    </div>
     </div>
   </div>
   <button class="scroll-to-top" id="scrollToTopBtn">
@@ -278,7 +278,7 @@
   </button>
 </div>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-<script src="./scriptItaliano2.js"></script>
+<script src="scriptItaliano2.js"></script>
 <script>
   function stopOtherAudio(currentAudio) {
     const audioElements = document.querySelectorAll('.audio-player');
@@ -319,5 +319,143 @@
   });
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-z-tEkDMKIwwAhDz8EYkYPhb5ja-51PA&callback=initMap"></script>
+<script>
+  const isDesktop = window.innerWidth >= 992;
+
+  let map;
+
+  async function initMap() {
+    const myLatLng = { lat: 41.241775, lng: 16.501577 };
+
+    const { Map } = await google.maps.importLibrary("maps");
+    const { AdvancedMarkerView } = await google.maps.importLibrary("marker");
+
+    map = new Map(document.getElementById("map"), {
+      zoom: isDesktop ? 15 : 14,
+      center: myLatLng,
+      mapTypeId: 'satellite',
+      disableDefaultUI: true,
+    });
+
+    const iconSize = isDesktop ? 70 : 50;
+
+    const tourStops = [
+      [{ lat: 41.241775, lng: 16.501577 }, "Capolinea"],
+      [{ lat: 41.239996, lng: 16.501186 }, "Parcheggio Conca Dei Monaci / Spiaggia Della Libertà"],
+      [{ lat: 41.241775, lng: 16.501577 }, "Lido La Salata"],
+      [{ lat: 41.242118, lng: 16.502418 }, "Spiaggia Salsello"],
+      [{ lat: 41.242445, lng: 16.502729 }, "Golden Cliff"],
+      [{ lat: 41.243538, lng: 16.503769 }, "Parcheggio Arena del Mediterraneo / Spiaggia Anfiteatro"],
+      [{ lat: 41.243833, lng: 16.505640 }, "Via L. Di Molfetta"],
+      [{ lat: 41.242719, lng: 16.506525 }, "Via L. Di Molfetta"],
+      [{ lat: 41.240138, lng: 16.505086 }, "Via L. Di Molfetta"],
+      [{ lat: 41.240485, lng: 16.505344 }, "Via della Libertà"],
+      [{ lat: 41.240650, lng: 16.505612 }, "Via Giovanni Bovio"],
+      [{ lat: 41.242017, lng: 16.505992 }, "Capolinea"]
+    ];
+
+    let prevInfoWindow = null;
+
+    tourStops.forEach(([position, title], i) => {
+      const marker = new google.maps.Marker({
+        position,
+        map,
+        title: `${title}`,
+        icon: {
+          url: `STATIC/assets/img/bisceglie/img/${i + 1}.png`,
+          scaledSize: new google.maps.Size(iconSize, iconSize)
+        }
+      });
+
+      const infowindow = new google.maps.InfoWindow({
+        content: `<div>${title}</div>`,
+      });
+
+      marker.addListener('click', () => {
+        if (prevInfoWindow) {
+          prevInfoWindow.close();
+        }
+        prevInfoWindow = infowindow;
+        infowindow.open(map, marker);
+
+        const targetElement = document.querySelector(`.timeline-item[data-text="${title}"]`);
+        if (targetElement) {
+          map.panTo(marker.position);
+          map.setZoom(17);
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    const timelineItems = document.querySelectorAll(".timeline-item");
+    timelineItems.forEach(item => {
+      item.addEventListener("click", function () {
+        const title = this.getAttribute("data-text");
+        const marker = tourStops.find(([_, t]) => t === title)[0];
+        map.panTo(marker);
+        map.setZoom(17);
+      });
+    });
+  }
+
+  window.initMap = initMap;
+
+  (function($) {
+    $.fn.timeline = function() {
+      var selectors = {
+        id: $(this),
+        item: $(this).find(".timeline-item"),
+        activeClass: "timeline-item--active",
+        img: ".timeline__img"
+      };
+      selectors.item.eq(0).addClass(selectors.activeClass);
+      selectors.id.css(
+        "background-image",
+        "url(" +
+        selectors.item
+          .first()
+          .find(selectors.img)
+          .attr("src") +
+        ")"
+      );
+      var itemLength = selectors.item.length;
+      $(window).scroll(function() {
+        var max, min;
+        var pos = $(this).scrollTop();
+        selectors.item.each(function(i) {
+          min = $(this).offset().top;
+          max = $(this).height() + $(this).offset().top;
+          var that = $(this);
+          if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+            selectors.item.removeClass(selectors.activeClass);
+            selectors.id.css(
+              "background-image",
+              "url(" +
+              selectors.item
+                .last()
+                .find(selectors.img)
+                .attr("src") +
+              ")"
+            );
+            selectors.item.last().addClass(selectors.activeClass);
+          } else if (pos <= max - 40 && pos >= min) {
+            selectors.id.css(
+              "background-image",
+              "url(" +
+              $(this)
+                .find(selectors.img)
+                .attr("src") +
+              ")"
+            );
+            selectors.item.removeClass(selectors.activeClass);
+            $(this).addClass(selectors.activeClass);
+          }
+        });
+      });
+    };
+  })(jQuery);
+
+  $("#timeline-1").timeline();
+</script>
 </body>
 </html>
