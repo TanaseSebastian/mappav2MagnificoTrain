@@ -76,6 +76,12 @@
       height: 400px; /* Altezza fissa per tutte le immagini */
       object-fit: cover;
     }
+    #qr-code {
+      margin-top: 20px; /* Valore di base */
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
 
   </style>
 </head>
@@ -88,12 +94,12 @@
   <div class="container">
     <h3 class="headline" style="text-align: center; color: #151515;">Tour Culturale</h3>
     <div class="row">
-      <div class="col-12 d-flex justify-content-center">
+      <!--<div class="col-12 d-flex justify-content-center">
         <img src="STATIC/assets/img/bisceglie/comune_bisceglie_badge.png" alt="Logo del Comune di Bisceglie" class="img-fluid common-width badge-img">
-      </div>
+      </div>-->
       <div class="col-12 d-flex justify-content-center">
         <div class="zoomable-container">
-          <img  id="qr-code" src="STATIC/assets/img/bisceglie/ticket_mobile.png" alt="Esempio biglietto tour bisceglie" class="img-fluid common-width zoomable-image">
+          <img  id="qr-code" src="STATIC/assets/img/bisceglie/ticket.JPG" alt="Esempio biglietto tour bisceglie" class="img-fluid common-width">
         </div>
       </div>
     </div>
@@ -272,7 +278,7 @@
 
 <!-- Template Main JS File -->
 <script src="STATIC/assets/js/main.js"></script>
-<script>
+<!--<script>
   function checkDeviceAndSetQRCodeSrc() {
     const qrcodeImage = document.getElementById('qr-code');
 
@@ -281,7 +287,7 @@
 
     // Modifica il src solo se la larghezza della finestra è maggiore o uguale a 768px (esempio per desktop)
     if (windowWidth >= 768) {
-      qrcodeImage.src = 'STATIC/assets/img/bisceglie/ticket_desktop.png'; // Sostituisci con il percorso dell'immagine per desktop
+      qrcodeImage.style.width=300p; // Sostituisci con il percorso dell'immagine per desktop
     }
   }
 
@@ -290,7 +296,7 @@
 
   // Aggiungi un ascoltatore per cambiamenti nella larghezza della finestra (ad esempio, quando si ridimensiona la finestra)
   window.addEventListener('resize', checkDeviceAndSetQRCodeSrc);
-</script>
+</script>-->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     const preloader = document.getElementById('preloader');
@@ -300,7 +306,7 @@
     }
 
     // Aggiungi eventi per il zoom
-    const zoomableImage = document.querySelector('.zoomable-image');
+    /*const zoomableImage = document.querySelector('.zoomable-image');
     if (zoomableImage) {
       zoomableImage.addEventListener('click', function() {
         if (zoomableImage.style.transform === 'scale(2)') {
@@ -311,7 +317,7 @@
           zoomableImage.style.cursor = 'zoom-out';
         }
       });
-    }
+    }*/
   });
 </script>
 </body>
