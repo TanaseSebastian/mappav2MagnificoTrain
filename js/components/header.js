@@ -10,9 +10,7 @@
             <li class="dropdown"><a href="index.html"><span>Percorsi</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
                 <!--<li><a href="index.html">Tutti i percorsi</a></li>-->
-                <li><a href="bisceglie.html">Bisceglie</a></li>
                 <li><a href="index.html">Margherita di Savoia</a></li>
-                <li><a href="index.html">Marina di Lesina - Villaggio Albatros</a></li>
               </ul>
             </li>
             <li><a class="nav-link scrollto" href="index.html#portfolio">Galleria</a></li>

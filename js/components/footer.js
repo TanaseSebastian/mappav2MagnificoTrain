@@ -9,9 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             <h3>Magnifico<span> Train</span></h3>
                             <div class="address">
                                 <i class="bi bi-geo-alt"> SEDI</i>
-                                <h4 class="mt-3">Bisceglie</h4>
                                 <h4 class="mt-0">Margherita Di Savoia</h4>
-                                <h4 class="mt-0">Marina di Lesina</h4>
                             </div>
                             <div class="email">
                                 <i class="bi bi-envelope"> EMAIL</i>
@@ -19,9 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             </div>
                             <div class="phone">
                                 <i class='bi bi-phone'> RECAPITI TELEFONICI</i>
-                                <h4 class="mt-3">Bisceglie <a href="tel:+393277431296">+39 327 743 1296</a></h4>
                                 <h4 class="mt-3">Margherita di Savoia <a href="tel:+393880719622">+39 388 071 9622</a></h4>
-                                <h4 class="mt-3">Marina di Lesina <a href="tel:0719300500">071 9300500</a></h4>
                             </div>
                             <div class="social-links mt-3">
                                 <a href="https://www.facebook.com/magnificotrenino/?paipv=0&eav=AfbJ2JE8aQLQXhedSgfi7g4oxji1wm8mzHcEcF3dVMr4DGYUcllsiytD3LDERMqjsKY&_rdr" class="facebook"><i class="bx bxl-facebook"></i></a>
